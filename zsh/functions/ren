@@ -1,0 +1,24 @@
+# Called like
+#   ren engine_name --mountable gemset_name
+if [ -z $1 ]; then
+    echo "use like:"
+    echo "  ren engine_name"
+    echo "  ren engine_name --mountable"
+    echo "  ren engine_name --full"
+    echo "  ren engine_name --mountable gemset_name"
+    return 1
+fi
+
+rvm gemset create ${1-3}
+if [ $? -ne 0 ]; then; return 1; fi
+rvm gemset use ${1-3}
+if [ $? -ne 0 ]; then; return 1; fi
+gem install rails
+if [ $? -ne 0 ]; then; return 1; fi
+rails plugin new $1 $2 --skip-test-unit --dummy-path=spec/dummy
+if [ $? -ne 0 ]; then; return 1; fi
+cd $1
+echo "rvm @${1}" > .rvmrc
+echo -e '.idea\n*.mine\n' >> .gitignore
+if [ $? -ne 0 ]; then; return 1; fi
+git init && git add . && git commit -am "generated engine ${1}"
