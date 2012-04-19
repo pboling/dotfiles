@@ -1,5 +1,8 @@
 # cd
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # ls
 alias ls="ls -F"
@@ -18,16 +21,55 @@ alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias gah='git add'
+alias gad='git add .'
+alias gap='git add --patch'
+alias god='git add . && git add -u .'
+
+# git-svn
+alias gsd='git svn dcommit'
+alias gsl='git svn log'
+
+# https://github.com/defunkt/hub
+alias git=hub
+# and then shorten it: "g" for "git"
+alias g='git'
 
 # rails
+alias tlog='tail -f log/development.log'
+alias migrate='rake db:migrate db:test:clone'
+
+# rails < 3
 alias sc='script/console'
 alias ss='script/server'
 alias sg='script/generate'
 alias a='autotest -rails'
-alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
-alias migrate='rake db:migrate db:test:clone'
-alias rst='touch tmp/restart.txt'
+
+# rails >= 3
+
+# bundler
+alias bin='bundle install'
+alias biv='bundle install --path vendor'
+alias bpk='bundle package'
+alias bup='bundle update'
+alias bec='bundle exec'
+
+# rspec
+alias best='bundle exec rspec spec'
+
+# Passenger
+#alias rst='touch tmp/restart.txt'
+
+# Pow
+alias rst='powder restart'
+alias plog='powder applog'
 
 # commands starting with % for pasting from web
 alias %=' '
+
+# utility
+alias reload='source ~/.zshrc'
+alias relias='source ~/.zsh/aliases'
+alias reconf='source ~/.zsh/config'
+alias recomp='source ~/.zsh/completion'
