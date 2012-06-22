@@ -11,23 +11,42 @@ alias ll="ls -l"
 alias la='ls -A'
 
 # git
-alias gl='git pull'
-alias gp='git push'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gco='git checkout'
 alias gb='git branch'
-alias gs='git status'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
-alias gah='git add'
-alias gad='git add .'
+alias gbr='git branch -a -v'
+alias gad='git add'
+alias gadd='git add .'
 alias gap='git add --patch'
 alias god='git add . && git add -u .'
+alias gps='git push'
+alias gpl='git pull'
+alias glo='git log --pretty=format:"%Cgreen%h %Creset %s %Cblueby %an (%ar) %Cred %d" --graph'
+alias gsh="git show \$1 --color"
+alias gdf='git diff'
+alias gdi='git diff --stat --color'
+alias gdc='git diff --cached --stat --color'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gme='git commit -m'
+alias gma='git commit -ma'
+alias gst='git status'
+alias gco='git checkout'
+alias gout='git checkout --'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gcl='git clone'
+alias gres='git reset HEAD'
+alias ghard='git reset --hard HEAD'
+alias gsoft='git reset --soft HEAD'
+alias gback='git reset --soft HEAD^'
+alias gash='git stash'
+alias gashp='git stash pop'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # git-svn
 alias gsd='git svn dcommit'
+alias gsl='git svn log'
+alias gsf='git svn fetch'
 alias gsl='git svn log'
 
 # https://github.com/defunkt/hub
