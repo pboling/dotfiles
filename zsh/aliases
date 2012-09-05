@@ -11,6 +11,23 @@ alias ll="ls -l"
 alias la='ls -A'
 
 # git
+
+# gch       => git checkout master
+# gch bugs  => git checkout bugs
+function gch {
+    if [ -z "$1" ]; then
+        git checkout master
+    else
+        git checkout $1
+    fi
+}
+function grout {
+    if [ -z "$1" ]; then
+        echo "Please provide a filename to reset and checkout"
+    else
+        git checkout -- $1 && git reset HEAD $1
+    fi
+}
 alias gb='git branch'
 alias gbr='git branch -a -v'
 alias gad='git add'
@@ -37,7 +54,7 @@ alias gcl='git clone'
 alias gres='git reset HEAD'
 alias ghard='git reset --hard HEAD'
 alias gsoft='git reset --soft HEAD'
-alias gback='git reset --soft HEAD^'
+alias gback='git reset --soft HEAD\^'
 alias gash='git stash'
 alias gashp='git stash pop'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
@@ -47,6 +64,10 @@ alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG
 alias gsd='git svn dcommit'
 alias gsl='git svn log'
 alias gsf='git svn fetch'
+alias gsr='git svn rebase'
+alias gsfr='git svn fetch && git svn rebase'
+alias gsfrp='god && git stash && git svn fetch && git svn rebase && git stash pop && gres'
+alias shbase='god && git stash save \"stash during rebase\" && gsfr && git stash pop && gres'
 alias gsl='git svn log'
 
 # https://github.com/defunkt/hub
@@ -73,6 +94,16 @@ alias biv='bundle install --path vendor'
 alias bpk='bundle package'
 alias bup='bundle update'
 alias bec='bundle exec'
+alias bspec='bundle exec rspec'
+alias vbspec='VCR_RECORD=all bundle exec rspec'
+alias best='bundle exec rspec spec'
+alias bex='bundle exec'
+alias brake='bundle exec rake'
+alias brlog='bundle exec rake log:clear'
+alias bro='bundle exec rake routes'
+alias brojs='bundle exec rake js:routes'
+alias brc='bundle exec rails c'
+alias brs='bundle exec rails s puma'
 
 # rspec
 alias best='bundle exec rspec spec'
