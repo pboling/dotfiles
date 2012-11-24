@@ -4,6 +4,9 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+
 # Set my preferred editor to TextWrangler
 export EDITOR='edit'
 export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
