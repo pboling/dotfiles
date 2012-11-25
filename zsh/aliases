@@ -10,6 +10,10 @@ alias ll="ls -l"
 alias la='ls -A'
 
 # git
+# https://github.com/defunkt/hub
+alias git=hub
+# and then shorten it: "g" for "git"
+alias g='git'
 
 # gch       => git checkout master
 # gch bugs  => git checkout bugs
