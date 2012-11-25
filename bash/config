@@ -1,2 +1,5 @@
 export PS1="\w$ "
-export EDITOR="mate_wait"
+# Set editor to TextWrangler
+export EDITOR="edit"
+# Set editor to bin/mate_wait script
+#export EDITOR="mate_wait"
