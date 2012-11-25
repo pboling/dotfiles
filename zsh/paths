@@ -1,0 +1,13 @@
+# Heroku's Postgres.app
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+# Add homebrew paths
+export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+
+# Add man paths
+export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
+
+# Add paths for sm
+export PATH="${PATH}:/Users/pboling/.sm/bin:/Users/pboling/.sm/pkg/active/bin:/Users/pboling/.sm/pkg/active/sbin"

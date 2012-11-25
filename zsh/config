@@ -6,10 +6,7 @@ fi
 
 # Set my preferred editor to TextWrangler
 export EDITOR='edit'
-export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
-export PATH="${PATH}:/Users/pboling/.sm/bin:/Users/pboling/.sm/pkg/active/bin:/Users/pboling/.sm/pkg/active/sbin"
+
 fpath=(~/.zsh/functions $fpath)
 
 autoload -U ~/.zsh/functions/*(:t)
