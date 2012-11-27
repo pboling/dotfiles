@@ -11,3 +11,5 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 
 # Add paths for sm
 export PATH="${PATH}:/Users/pboling/.sm/bin:/Users/pboling/.sm/pkg/active/bin:/Users/pboling/.sm/pkg/active/sbin"
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
