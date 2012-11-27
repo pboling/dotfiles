@@ -1,4 +1,10 @@
-export PS1="\w$ "
+#PS1="\w$ "
+#PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
+
+# RVM must be installed for this to work.
+source "$rvm_path/contrib/ps1_functions"
+ps1_set --prompt ∴
+
 # Set editor to TextWrangler
 export EDITOR="edit"
 # Set editor to bin/mate_wait script
