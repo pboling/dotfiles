@@ -9,7 +9,7 @@
 	branch = auto
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -w
+	editor = edit
 	autocrlf = input
 [apply]
 	whitespace = nowarn
@@ -20,3 +20,5 @@
 #	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
 [push]
 	default = simple
+[credential]
+	helper = osxkeychain
