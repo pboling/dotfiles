@@ -6,6 +6,6 @@ source "$rvm_path/contrib/ps1_functions"
 ps1_set --prompt ∴
 
 # Set editor to TextWrangler
-export EDITOR="edit"
+export EDITOR="nano"
 # Set editor to bin/mate_wait script
 #export EDITOR="mate_wait"
