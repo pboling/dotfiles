@@ -17,3 +17,5 @@ rdoc
 .bundle
 # jeweler generated
 pkg
+# rvm
+.rvmrc
