@@ -1,11 +1,28 @@
+# Add homebrew paths
 export PATH="~/bin:~/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
+
+# Add paths for sm
 export PATH="${PATH}:/Users/pboling/.sm/bin:/Users/pboling/.sm/pkg/active/bin:/Users/pboling/.sm/pkg/active/sbin"
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH" # Add Postgres to path
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Heroku's Postgres.app
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+# Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin
+
+# Java!
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+
+# EC2 tools
+export EC2_HOME=~/.ec2/tools
+
+# Add EC2 tools to path
+export PATH=$PATH:$EC2_HOME/bin
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
-
 # Load RVM into the shell first thing after the PATHs so it is available for the rest of the env setup
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
