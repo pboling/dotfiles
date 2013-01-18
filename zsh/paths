@@ -9,9 +9,6 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 # Add man paths
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
-# Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.rvm/bin
-
 # Add paths for sm
 export PATH="${PATH}:/Users/pboling/.sm/bin:/Users/pboling/.sm/pkg/active/bin:/Users/pboling/.sm/pkg/active/sbin"
 
@@ -23,7 +20,3 @@ export EC2_HOME=~/.ec2/tools
 
 # Add EC2 tools to path
 export PATH=$PATH:$EC2_HOME/bin
-
-# Load RVM into the shell first thing after the PATHs so it is available for the rest of the env setup
-export PATH=$PATH:$HOME/.rvm/bin
-
