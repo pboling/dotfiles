@@ -2,8 +2,9 @@
 #PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
 
 # RVM must be installed for this to work.
-source "$rvm_path/contrib/ps1_functions"
-ps1_update --prompt ∴
+[[ -s "$HOME/.rvm/contrib/ps1_functions" ]] &&
+      source "$HOME/.rvm/contrib/ps1_functions"
+ps1_set --prompt ∴
 
 # Set editor to TextWrangler
 export EDITOR="nano"
