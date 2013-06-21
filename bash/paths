@@ -10,12 +10,15 @@ export PATH="${PATH}:/Users/pboling/.sm/bin:/Users/pboling/.sm/pkg/active/bin:/U
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # Java!
-export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
 # EC2 tools
 export EC2_HOME=~/.ec2/tools
 
 # Add EC2 tools to path
 export PATH=$PATH:$EC2_HOME/bin
+
+# Add node to path:
+export PATH=$PATH:/usr/local/share/npm/bin
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
