@@ -107,6 +107,7 @@ alias bro='bundle exec rake routes'
 alias brojs='bundle exec rake js:routes'
 alias brc='bundle exec rails c'
 alias brs='bundle exec rails s puma'
+alias brsdfp='DISABLE_FORWARD_PROXY=true bundle exec rails s puma'
 
 # rspec
 alias best='bundle exec rspec spec'
