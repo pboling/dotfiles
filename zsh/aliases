@@ -73,11 +73,6 @@ alias gsfrp='god && git stash && git svn fetch && git svn rebase && git stash po
 alias shbase='god && git stash save \"stash during rebase\" && gsfr && git stash pop && gres'
 alias gsl='git svn log'
 
-# https://github.com/defunkt/hub
-alias git=hub
-# and then shorten it: "g" for "git"
-alias g='git'
-
 # rails
 alias tlog='tail -f log/development.log'
 alias migrate='rake db:migrate db:test:clone'
