@@ -31,6 +31,22 @@ function grout {
         git checkout -- $1 && git reset HEAD $1
     fi
 }
+function gfist {
+    if [ -z "$1" ]; then
+        echo -e "To provide a remote other than origin to get a list of file changes against current HEAD use:\n\tgfist <remote-name>/<branch-name>"
+        git diff origin/master head --stat
+    else
+        git diff $1 head --stat
+    fi
+}
+function gdist {
+    if [ -z "$1" ]; then
+        echo -e "To provide a remote other than origin to get a summary of directory changes against current HEAD use:\n\tgdist <remote-name>/<branch-name>"
+        git diff origin/master head --dirstat
+    else
+        git diff $1 head --dirstat
+    fi
+}
 alias gb='git branch'
 alias gbr='git branch -a -v'
 alias gad='git add'
