@@ -34,16 +34,20 @@ function grout {
 function gfist {
     if [ -z "$1" ]; then
         echo -e "To provide a remote other than origin to get a list of file changes against current HEAD use:\n\tgfist <remote-name>/<branch-name>"
+        echo "running git diff origin/master head --stat"
         git diff origin/master head --stat
     else
+        echo "running git diff $1 head --stat"
         git diff $1 head --stat
     fi
 }
 function gdist {
     if [ -z "$1" ]; then
         echo -e "To provide a remote other than origin to get a summary of directory changes against current HEAD use:\n\tgdist <remote-name>/<branch-name>"
+        echo "running git diff origin/master head --dirstat"
         git diff origin/master head --dirstat
     else
+        echo "running git diff $1 head --dirstat"
         git diff $1 head --dirstat
     fi
 }
@@ -52,7 +56,7 @@ alias gbr='git branch -a -v'
 alias gad='git add'
 alias gadd='git add .'
 alias gap='git add --patch'
-alias god='git add . && git add -u .'
+alias god='git add -A .'
 alias gps='git push'
 alias gpl='git pull'
 alias glo='git log --pretty=format:"%Cgreen%h %Creset %s %Cblueby %an (%ar) %Cred %d" --graph'
@@ -77,6 +81,7 @@ alias gback='git reset --soft HEAD\^'
 alias gash='git stash'
 alias gashp='git stash pop'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gcl="git clean -d -f"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # git-svn
