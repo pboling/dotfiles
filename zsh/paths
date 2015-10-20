@@ -3,8 +3,8 @@ export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/lo
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 
-# Heroku's Postgres.app (for 9.3+)
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+# Heroku's Postgres.app (for 9.4)
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Add man paths
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
