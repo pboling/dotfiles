@@ -9,6 +9,9 @@ alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
 
+# ping
+alias sping="ping -i 2 -s 4"
+
 # git
 # https://github.com/defunkt/hub
 alias git=hub
@@ -143,3 +146,6 @@ alias reload='source ~/.zshrc'
 alias relias='source ~/.zsh/aliases'
 alias reconf='source ~/.zsh/config'
 alias recomp='source ~/.zsh/completion'
+
+# ember
+alias shopping-client='ember serve --output-path "/Users/pboling/Documents/trumaker/archer/public/shopping-client" --environment=ember-local'
