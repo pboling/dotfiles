@@ -157,3 +157,6 @@ alias recomp='source ~/.zsh/completion'
 
 # ember
 alias shopping-client='ember serve --output-path "/Users/pboling/Documents/trumaker/archer/public/shopping-client" --environment=ember-local'
+
+# hugo
+alias bling='hugo server -w -t redlounge'
