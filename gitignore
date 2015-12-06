@@ -21,3 +21,5 @@ pkg
 .rvmrc
 .ruby-gemset
 .ruby-version
+# created by wwtd gem
+vendor/bundle
