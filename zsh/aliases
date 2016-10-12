@@ -56,6 +56,7 @@ function gdist {
 }
 alias gb='git branch'
 alias gbr='git branch -a -v'
+alias gbDA='git branch | egrep -v "\*|\s+(master|development|rc|quality)" | xargs git branch -D'
 alias gad='git add'
 alias gadd='git add .'
 alias gap='git add --patch'
