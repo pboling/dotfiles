@@ -23,3 +23,5 @@ pkg
 .ruby-version
 # created by wwtd gem
 vendor/bundle
+# created by github_cli gem
+.githubrc
