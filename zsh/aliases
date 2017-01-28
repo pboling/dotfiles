@@ -161,3 +161,6 @@ alias shopping-client='ember serve --output-path "/Users/pboling/Documents/truma
 
 # hugo
 alias bling='hugo server --source ~/Documents/hugo/railsbling --buildDrafts --watch --theme redlounge --destination ~/Documents/hugo/drafts'
+
+# alternate dropbox:
+alias dropalt='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox &'
