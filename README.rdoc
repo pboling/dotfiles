@@ -9,8 +9,8 @@ rvm, git, hub
 
 == Installation
 
-  git clone git://github.com/pboling/dotfiles ~/some/code/directory/dotfiles
-  ln -s /Users/pboling/some/code/directory/dotfiles ./dotfiles
+  git clone git://github.com/pboling/dotfiles ~/Documents/src/dotfiles
+  ln -s /Users/pboling/Documents/src/dotfiles ./dotfiles
   cd ~/.dotfiles
   rake install
 
