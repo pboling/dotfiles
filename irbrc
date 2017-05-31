@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+puts "loading dotfiles/irbrc"
 require 'irb/completion'
 require 'irb/ext/save-history'
 
@@ -19,7 +20,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
