@@ -54,6 +54,26 @@ function gdist {
         git diff $1 head --dirstat
     fi
 }
+function isr {
+    if [ -z "$1" ]; then
+        echo -e "To ssh with screen into a remote server pass <user>@<IP>"
+        echo "connecting... ssh -t $DEFAULT_SSH_OPTIONS $DEFAULT_SSH_TARGET screen $2"
+        ssh -t $DEFAULT_SSH_OPTIONS $DEFAULT_SSH_TARGET screen $2
+    else
+        echo "connecting... ssh -t $DEFAULT_SSH_OPTIONS $1 screen $2"
+        ssh -t $DEFAULT_SSH_OPTIONS $1 screen $2
+    fi
+}
+function ish {
+    if [ -z "$1" ]; then
+        echo -e "To ssh into a remote server pass <user>@<IP>"
+        echo "connecting... ssh -t $DEFAULT_SSH_OPTIONS $DEFAULT_SSH_TARGET"
+        ssh -t $DEFAULT_SSH_OPTIONS $DEFAULT_SSH_TARGET
+    else
+        echo "connecting... ssh -t $DEFAULT_SSH_OPTIONS $1"
+        ssh -t $DEFAULT_SSH_OPTIONS $1
+    fi
+}
 function grabdef {
     if [ -z "$1" ]; then
         echo -e "To provide a default grab image format other than the default:\n\tgfist {gif,jpg,tiff,pdf,psd,png}"
@@ -67,7 +87,7 @@ function grabdef {
 
 alias gb='git branch'
 alias gbr='git branch -a -v'
-alias gbDA='git branch | egrep -v "\*|\s+(master|development|rc|quality)" | xargs git branch -D'
+alias gbDA='git branch | egrep -v "\*|\s+(master|development|develop|staging|rc|quality)" | xargs git branch -D'
 alias gad='git add'
 alias gadd='git add .'
 alias gap='git add --patch'
