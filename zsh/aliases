@@ -54,6 +54,17 @@ function gdist {
         git diff $1 head --dirstat
     fi
 }
+function grabdef {
+    if [ -z "$1" ]; then
+        echo -e "To provide a default grab image format other than the default:\n\tgfist {gif,jpg,tiff,pdf,psd,png}"
+        echo "running defaults write com.apple.screencapture type png && killall SystemUIServer"
+        defaults write com.apple.screencapture type png && killall SystemUIServer
+    else
+        echo "defaults write com.apple.screencapture type $1 && killall SystemUIServer"
+        defaults write com.apple.screencapture type $1 && killall SystemUIServer
+    fi
+}
+
 alias gb='git branch'
 alias gbr='git branch -a -v'
 alias gbDA='git branch | egrep -v "\*|\s+(master|development|rc|quality)" | xargs git branch -D'
