@@ -6,11 +6,11 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 # Add paths for sm
 export PATH="${PATH}:/Users/pboling/.sm/bin:/Users/pboling/.sm/pkg/active/bin:/Users/pboling/.sm/pkg/active/sbin"
 
-# Heroku's Postgres.app (for 9.4)
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+# Heroku's Postgres.app (for latest version)
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # Java!
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # EC2 tools
 export EC2_HOME=~/.ec2/tools
