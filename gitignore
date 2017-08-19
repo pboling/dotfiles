@@ -24,3 +24,6 @@ pkg
 vendor/bundle
 # created by github_cli gem
 .githubrc
+# for iCloud Drive
+*.icloud
+
