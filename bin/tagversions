@@ -18,7 +18,7 @@ class TagVersions
   def print_help
     puts <<-HELP
 Usage: tagversions [OPTIONS] [REGEXP]
-  Look through the git commits for messages with the given regular expression and tag what looks like verisons.
+  Look through the git commits for messages with the given regular expression and tag what looks like versions.
 
   Options:
     -a, --all     Search all commits, not just the ones matching the regular expression.
