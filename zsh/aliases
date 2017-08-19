@@ -76,7 +76,7 @@ function ish {
 }
 function grabdef {
     if [ -z "$1" ]; then
-        echo -e "To provide a default grab image format other than the default:\n\tgfist {gif,jpg,tiff,pdf,psd,png}"
+        echo -e "To provide a default grab image format other than the default:\n\tgrabdef {gif,jpg,tiff,pdf,psd,png}"
         echo "running defaults write com.apple.screencapture type png && killall SystemUIServer"
         defaults write com.apple.screencapture type png && killall SystemUIServer
     else
@@ -195,3 +195,6 @@ alias bling='hugo server --source ~/Documents/hugo/railsbling --buildDrafts --wa
 
 # alternate dropbox:
 alias dropalt='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox &'
+
+# docker
+alias evdocker="eval $(docker-machine env default)"
