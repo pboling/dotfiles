@@ -8,6 +8,7 @@
 	status = auto
 	branch = auto
 [core]
+	hooksPath = /Users/pboling/.git-support/hooks
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
 	editor = nano
 	autocrlf = input
@@ -22,3 +23,8 @@
 	default = simple
 [credential]
 	helper = osxkeychain
+[gitseekret]
+	version = 1
+	rulespath = /Users/pboling/.git-support/seekret-rules
+	rulesenabled = aws.secret_access_key,aws.access_key_id,aws.account_id,mandrill.username,mandrill.password,mandrill.api_key,newrelic.license_key,slack.api_token
+	exceptionsfile = ""
