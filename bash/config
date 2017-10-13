@@ -1,12 +1,13 @@
 #PS1="\w$ "
-#PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
 
-# RVM must be installed for this to work.
-[[ -s "$HOME/.rvm/contrib/ps1_functions" ]] &&
-      source "$HOME/.rvm/contrib/ps1_functions"
+# Set a custom prompt
+[[ -s "$HOME/.bash/ps1_functions.sh" ]] &&
+      source ~/.bash/ps1_functions.sh
 ps1_set --prompt ∴
 
 # Set editor to TextWrangler
+#
+# Set editor to nano
 export EDITOR="nano"
 # Set editor to bin/mate_wait script
 #export EDITOR="mate_wait"
