@@ -26,9 +26,3 @@ eval "$(hub alias -s)"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
-source /usr/local/share/chruby/chruby.sh
-
-source /usr/local/share/chruby/auto.sh
-
-chruby ruby-2.4.2
