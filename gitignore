@@ -26,4 +26,5 @@ vendor/bundle
 .githubrc
 # for iCloud Drive
 *.icloud
-
+# For byebug
+.byebug_history
