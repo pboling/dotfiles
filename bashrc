@@ -2,27 +2,33 @@ source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/paths
 
-# use .localrc for settings specific to one system
-if [ -f ~/.localrc ]; then
-  source ~/.localrc
-fi
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# use .localrc for settings specific to one system
+[[ -s "$HOME/.localrc" ]] && source "$HOME/.localrc"
 
 # Load RVM into the shell first thing after the PATHs so it is available for the rest of the env setup
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 source ~/.bash/config
 
-
-
-
 alias laptop='bash <(curl -s https://raw.githubusercontent.com/18F/laptop/master/laptop)'
 
-export PATH="$HOME/.bin:$PATH"
-
+# Hub! for Github integration with Git
 eval "$(hub alias -s)"
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# Python!
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+#
+# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+#
+# pyenv global system
 
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+# Fix for jruby + rvm
+# https://stackoverflow.com/a/8371190/213191
+chmod +x ${rvm_path}/hooks/after_use_jruby_opts
+export JRUBY_OPTS=--1.9
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
