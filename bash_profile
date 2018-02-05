@@ -1,9 +1,6 @@
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
-fi
+[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc" # Load the default .bashrc
 
-if [ -f ~/.profile ]; then
-  source ~/.profile
-fi
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+[[ -s "$HOME/.iterm2_shell_integration.bash" ]] && source "$HOME/.iterm2_shell_integration.bash" # Load iTerm2 integration
+
