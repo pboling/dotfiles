@@ -118,6 +118,7 @@ alias gashp='git stash pop'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gcl="git clean -d -f"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias recent="git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always|column -ts'|'}"
 
 # git-svn
 alias gsd='git svn dcommit'
