@@ -133,13 +133,7 @@ alias gsl='git svn log'
 # rails
 alias tlog='tail -f log/development.log'
 alias migrate='rake db:migrate db:test:clone'
-
-# rails < 3
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest -rails'
-alias scaffold='script/generate nifty_scaffold'
+alias plog='tail -f ~/Library/Logs/puma-dev.log'
 
 # rails >= 3
 
@@ -175,10 +169,6 @@ alias best='bundle exec rspec spec'
 # Passenger
 #alias rst='touch tmp/restart.txt'
 
-# Pow
-alias rst='powder restart'
-alias plog='powder applog'
-
 # commands starting with % for pasting from web
 alias %=' '
 
@@ -192,7 +182,7 @@ alias recomp='source ~/.zsh/completion'
 # alias shopping-client='ember serve --output-path "/Users/pboling/Documents/trumaker/archer/public/shopping-client" --environment=ember-local'
 
 # hugo
-alias bling='hugo server --source ~/Documents/hugo/railsbling --buildDrafts --watch --theme redlounge --destination ~/Documents/hugo/drafts'
+alias bling='hugo server --source ~/Documents/hugo/railsbling --buildDrafts --buildExpired --buildFuture --forceSyncStatic --watch --theme redlounge --destination ~/Documents/hugo/drafts'
 
 # alternate dropbox:
 alias dropalt='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox &'
