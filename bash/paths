@@ -10,7 +10,8 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 # Java!
-export JAVA_HOME=`/usr/libexec/java_home -v 9`
+# The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
+export JAVA_HOME=`/usr/libexec/java_home -v 10`
 
 # EC2 tools
 export EC2_HOME=~/.ec2/tools
