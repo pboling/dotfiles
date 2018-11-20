@@ -2,9 +2,6 @@ source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/paths
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 # use .localrc for settings specific to one system
 [[ -s "$HOME/.localrc" ]] && source "$HOME/.localrc"
 
@@ -29,6 +26,3 @@ eval "$(hub alias -s)"
 # https://stackoverflow.com/a/8371190/213191
 chmod +x ${rvm_path}/hooks/after_use_jruby_opts
 export JRUBY_OPTS=--1.9
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"

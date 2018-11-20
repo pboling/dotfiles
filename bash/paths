@@ -11,7 +11,7 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 # Java!
 # The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
-export JAVA_HOME=`/usr/libexec/java_home -v 10`
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 # EC2 tools
 export EC2_HOME=~/.ec2/tools
@@ -22,9 +22,8 @@ export PATH=$PATH:$EC2_HOME/bin
 # Add node to path:
 export PATH=$PATH:/usr/local/share/npm/bin
 
-# Add NVM to PATH
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+# Add Python 2.7 to path:
+export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
