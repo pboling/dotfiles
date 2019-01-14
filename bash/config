@@ -11,3 +11,6 @@ ps1_set --prompt ∴
 export EDITOR="nano"
 # Set editor to bin/mate_wait script
 #export EDITOR="mate_wait"
+
+# Allow GPG to sign keys
+export GPG_TTY=$(tty)
