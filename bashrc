@@ -3,10 +3,7 @@ source ~/.bash/completions
 source ~/.bash/paths
 
 # use .localrc for settings specific to one system
-[[ -s "$HOME/.localrc" ]] && source "$HOME/.localrc"
-
-# Load RVM into the shell first thing after the PATHs so it is available for the rest of the env setup
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.localrc" ]] && echo "Loading your .localrc, human" && source "$HOME/.localrc"
 
 source ~/.bash/config
 
@@ -22,7 +19,5 @@ eval "$(hub alias -s)"
 #
 # pyenv global system
 
-# Fix for jruby + rvm
-# https://stackoverflow.com/a/8371190/213191
-chmod +x ${rvm_path}/hooks/after_use_jruby_opts
-export JRUBY_OPTS=--1.9
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
