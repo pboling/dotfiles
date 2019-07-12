@@ -160,13 +160,13 @@ ps4_set()
 #
 # The PROMPT_COMMAND is used to help the prompt work if the separator is not a new line.
 # In the event that the separator is not a new line, the prompt line may become distorted if
-# you add or delete a certian number of characters, making the string wider than the
+# you add or delete a certain number of characters, making the string wider than the
 # $COLUMNS + len(your_input_line).
 #
 # This orginally was done with callbacks within the PS1 to add in things like the git
 # commit, but this results in the PS1 being of an unknown width which results in the prompt
 # being distorted if you add or remove a certain number of characters. To work around this
-# it now uses the PROMPT_COMMAND callback to re-set the PS1 with a known width of chracters
+# it now uses the PROMPT_COMMAND callback to re-set the PS1 with a known width of characters
 # each time a new command is entered. See PROMPT_COMMAND for more details.
 #
 ps1_set()
