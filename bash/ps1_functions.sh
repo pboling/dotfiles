@@ -18,9 +18,23 @@
 #
 # This will yield a prompt like the following, for example,
 #
-# 00:00:50 wayneeseguin@GeniusAir:~/projects/db0/rvm/rvm  (git:master:156d0b4)  ruby-1.8.7-p334@rvm
+# 18:39:56 pboling@myjam:~/Documents/GitHub/foobar (git:pboling/138-push-changes:ecd65ea)  |ruby-2.6.3|
 # ∴
-#
+
+RBENV_THEME_PROMPT_PREFIX='|\[\033[0;33m\]'
+RBENV_THEME_PROMPT_SUFFIX='\[\033[0m\]|'
+
+rbenv_version_prompt()
+{
+  if rbenv local &> /dev/null; then
+    rubyv=$(rbenv local) || return
+    echo -e "$RBENV_THEME_PROMPT_PREFIX$rubyv$RBENV_THEME_PROMPT_SUFFIX"
+  elif which rbenv &> /dev/null; then
+    rubyv=$(rbenv global) || return
+    echo -e "$RBENV_THEME_PROMPT_PREFIX$rubyv$RBENV_THEME_PROMPT_SUFFIX"
+  fi
+}
+
 ps1_titlebar()
 {
   case $TERM in
@@ -84,9 +98,9 @@ ps1_git_status()
   [[ "${git_status}" = *modified:* ]]                  && printf "%s" "*"
 }
 
-ps1_rvm()
+ps1_rbenv()
 {
-  command -v rvm-prompt >/dev/null 2>&1 && printf "%s" " $(rvm-prompt) "
+  command -v rbenv_version_prompt >/dev/null 2>&1 && printf "%s" " $(rbenv_version_prompt) "
 }
 
 ps1_update()
@@ -100,7 +114,7 @@ ps1_update()
 
     case "$token" in
       --trace)
-        export PS4="+ \${BASH_SOURCE##\${rvm_path:-}} : \${FUNCNAME[0]:+\${FUNCNAME[0]}()}  \${LINENO} > "
+        export PS4="+ \${BASH_SOURCE##} : \${FUNCNAME[0]:+\${FUNCNAME[0]}()}  \${LINENO} > "
         set -o xtrace
         ;;
       --prompt)
@@ -124,9 +138,9 @@ ps1_update()
   done
 
   if (( notime > 0 )) ; then
-    PS1="$(ps1_titlebar)$(ps1_identity)$(ps1_git)$(ps1_rvm)${separator}${prompt_char} "
+    PS1="$(ps1_titlebar)$(ps1_identity)$(ps1_git)$(ps1_rbenv)${separator}${prompt_char} "
   else
-    PS1="$(ps1_titlebar)\D{%H:%M:%S} $(ps1_identity)$(ps1_git)$(ps1_rvm)${separator}${prompt_char} "
+    PS1="$(ps1_titlebar)\D{%H:%M:%S} $(ps1_identity)$(ps1_git)$(ps1_rbenv)${separator}${prompt_char} "
   fi
 }
 
@@ -137,7 +151,7 @@ ps2_set()
 
 ps4_set()
 {
-  export PS4="+ \${BASH_SOURCE##\${rvm_path:-}} : \${FUNCNAME[0]:+\${FUNCNAME[0]}()}  \${LINENO} > "
+  export PS4="+ \${BASH_SOURCE##} : \${FUNCNAME[0]:+\${FUNCNAME[0]}()}  \${LINENO} > "
 }
 
 # WARNING:  This clobbers your PROMPT_COMMAND so if you need to write your own, call

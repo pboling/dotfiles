@@ -1,6 +1,5 @@
-if [ -f "$rvm_path/scripts/rvm" ] && [ -f ".ruby-version" ] && [ -f ".ruby-gemset" ]; then
-  source "$rvm_path/scripts/rvm"
+if [ -f ".ruby-version" ]; then
+  eval "$(rbenv init -)"
   RUBY_VERSION=$(< "$PWD/.ruby-version")
-  RUBY_GEMSET=$(< "$PWD/.ruby-gemset")
-  rvm $RUBY_VERSION@$RUBY_GEMSET
+  rbenv shell $RUBY_VERSION
 fi

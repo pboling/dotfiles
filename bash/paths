@@ -24,6 +24,3 @@ export PATH=$PATH:/usr/local/share/npm/bin
 
 # Add Python 2.7 to path:
 export PATH="$PATH:$HOME/Library/Python/2.7/bin"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
