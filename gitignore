@@ -28,6 +28,8 @@ vendor/bundle
 *.icloud
 # For byebug
 .byebug_history
+# For Storybook (React, Javascropt)
+storybook-static/
 
 tag_release.sh
 Archive.zip

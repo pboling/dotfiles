@@ -1,7 +1,7 @@
 # export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 
 # Add bin paths, in order of precedence
-export PATH="~/bin:~/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 
 # Postgres.app Integration (for latest version)
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
@@ -14,13 +14,13 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 # EC2 tools
-export EC2_HOME=~/.ec2/tools
+export EC2_HOME=$HOME/.ec2/tools
 
 # Add EC2 tools to path
 export PATH=$PATH:$EC2_HOME/bin
 
-# Add node to path:
-export PATH=$PATH:/usr/local/share/npm/bin
+# JX
+export PATH=$HOME/.jx/bin/:$PATH
 
-# Add Python 2.7 to path:
-export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"

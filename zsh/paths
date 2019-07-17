@@ -1,7 +1,7 @@
 # export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 
 # Add bin paths, in order of precedence
-export PATH="$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.bin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 
 # Postgres.app Integration (for latest version)
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
@@ -18,6 +18,3 @@ export EC2_HOME=$HOME/.ec2/tools
 
 # Add EC2 tools to path
 export PATH=$PATH:$EC2_HOME/bin
-
-# Add node to path:
-export PATH=$PATH:/usr/local/share/npm/bin
