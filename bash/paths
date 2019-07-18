@@ -19,6 +19,9 @@ export EC2_HOME=$HOME/.ec2/tools
 # Add EC2 tools to path
 export PATH=$PATH:$EC2_HOME/bin
 
+# Python
+export PATH="/Users/karuna/.pyenv/bin:$PATH"
+
 # JX
 export PATH=$HOME/.jx/bin/:$PATH
 
