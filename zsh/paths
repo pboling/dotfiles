@@ -3,6 +3,9 @@
 # Add bin paths, in order of precedence
 export PATH="$HOME/bin:$HOME/.bin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 
+# Mysql: https://medium.com/@at0dd/install-mysql-5-7-on-mac-os-mojave-cd07ec936034
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
 # Postgres.app Integration (for latest version)
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
@@ -11,7 +14,7 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 # Java!
 # The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
-export JAVA_HOME=`/usr/libexec/java_home -v 10`
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 # EC2 tools
 export EC2_HOME=$HOME/.ec2/tools
