@@ -5,7 +5,7 @@ These are config files to set up a system the way I like it.
 
 == Pre-requisites
 
-rbenv, git, hub
+git, hub, rbenv, pyenv
 
 
 == Installation
