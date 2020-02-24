@@ -15,6 +15,9 @@ eval "$(hub alias -s)"
 # rbenv setup ($PATH and shell completions)
 eval "$(rbenv init -)"
 
+# gpg setup - allow password from terminal input
+export GPG_TTY=$(tty)
+
 # Python! https://github.com/pyenv/pyenv-installer#prerequisites
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi

@@ -1,0 +1,42 @@
+# export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
+
+# Add bin paths, in order of precedence
+export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
+
+# git
+export PATH="/usr/local/git/bin:$PATH"
+
+# Postgres.app Integration (for latest version)
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
+# Mysql: https://medium.com/@at0dd/install-mysql-5-7-on-mac-os-mojave-cd07ec936034
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# Add man paths
+export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+
+# Java!
+# The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
+
+# EC2 tools
+export EC2_HOME=$HOME/.ec2/tools
+
+# Add EC2 tools to path
+export PATH=$PATH:$EC2_HOME/bin
+
+# Python
+export PATH="$HOME/.pyenv/bin:$PATH"
+
+# JX
+export PATH=$HOME/.jx/bin/:$PATH
+
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+# ES
+# https://chartio.com/resources/tutorials/how-to-install-elasticsearch-on-mac-os-x/#manual-elasticsearch-installation
+# export ES_HOME=~/src/elasticsearch-6.8.4
+export ES_HOME=~/src/elasticsearch-6.4.3
+
+export PATH=$ES_HOME/bin:$JAVA_HOME/bin:$PATH
