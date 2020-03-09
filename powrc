@@ -1,5 +1,6 @@
-if [ -f ".ruby-version" ]; then
-  eval "$(rbenv init -)"
-  RUBY_VERSION=$(< "$PWD/.ruby-version")
-  rbenv shell $RUBY_VERSION
-fi
+# TODO: Update for asdf
+#if [ -f ".ruby-version" ]; then
+#  eval "$(rbenv init -)"
+#  RUBY_VERSION=$(< "$PWD/.ruby-version")
+#  rbenv shell $RUBY_VERSION
+#fi

@@ -1,1 +1,1 @@
-[[ -s "$HOME/.shared/paths" ]] && echo "Loading .shared/paths, human" && source "$HOME/.shared/paths"
+[[ -s "$HOME/.shared/paths.sh" ]] && echo "Loading .shared/paths.sh, human" && source "$HOME/.shared/paths.sh"

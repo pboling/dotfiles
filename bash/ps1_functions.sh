@@ -21,18 +21,21 @@
 # 18:39:56 pboling@myjam:~/Documents/GitHub/foobar (git:pboling/138-push-changes:ecd65ea)  |ruby-2.6.3|
 # ∴
 
-RBENV_THEME_PROMPT_PREFIX='|\[\033[0;33m\]'
-RBENV_THEME_PROMPT_SUFFIX='\[\033[0m\]|'
+# TODO: Update for asdf
+#RBENV_THEME_PROMPT_PREFIX='|\[\033[0;33m\]'
+#RBENV_THEME_PROMPT_SUFFIX='\[\033[0m\]|'
 
+# TODO: Update for asdf
 rbenv_version_prompt()
 {
-  if rbenv local &> /dev/null; then
-    rubyv=$(rbenv local) || return
-    echo -e "$RBENV_THEME_PROMPT_PREFIX$rubyv$RBENV_THEME_PROMPT_SUFFIX"
-  elif which rbenv &> /dev/null; then
-    rubyv=$(rbenv global) || return
-    echo -e "$RBENV_THEME_PROMPT_PREFIX$rubyv$RBENV_THEME_PROMPT_SUFFIX"
-  fi
+#  if rbenv local &> /dev/null; then
+#    rubyv=$(rbenv local) || return
+#    echo -e "$RBENV_THEME_PROMPT_PREFIX$rubyv$RBENV_THEME_PROMPT_SUFFIX"
+#  elif which rbenv &> /dev/null; then
+#    rubyv=$(rbenv global) || return
+#    echo -e "$RBENV_THEME_PROMPT_PREFIX$rubyv$RBENV_THEME_PROMPT_SUFFIX"
+#  fi
+echo -e "ruby"
 }
 
 ps1_titlebar()
@@ -98,6 +101,7 @@ ps1_git_status()
   [[ "${git_status}" = *modified:* ]]                  && printf "%s" "*"
 }
 
+# TODO: Update for asdf
 ps1_rbenv()
 {
   command -v rbenv_version_prompt >/dev/null 2>&1 && printf "%s" " $(rbenv_version_prompt) "

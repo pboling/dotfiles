@@ -3,10 +3,9 @@
 . ~/.zsh/aliases
 . ~/.zsh/completion
 
-# use .localrc for settings specific to one system
-[[ -f ~/.localrc ]] && . ~/.localrc
+autoload -Uz compinit && compinit
 
-export PATH="$PATH:$HOME/.jx/bin/"
+# direnv setup
+eval "$(direnv hook zsh)"
 
-# rbenv setup ($PATH and shell completions)
-eval "$(rbenv init -)"
+[[ -s "$HOME/.shared/bourne.sh" ]] && echo "Loading .shared/bourne.sh, human" && source "$HOME/.shared/bourne.sh"
