@@ -1,7 +1,10 @@
-. ~/.zsh/aliases
+. ~/.shared/aliases.sh
 
 # changing directory to code project
 function c { cd ~/Documents/code/$1; }
 
 # misc
 alias reload='. ~/.bash_profile'
+
+# Listing recent git directories in Bash
+alias recent="git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always|column -ts'|'}"
