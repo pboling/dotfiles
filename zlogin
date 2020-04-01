@@ -4,5 +4,3 @@ if [[ -f ~/.current_path~ ]]; then
   rm ~/.current_path~
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

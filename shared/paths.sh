@@ -27,9 +27,6 @@ export EC2_HOME=$HOME/.ec2/tools
 # Add EC2 tools to path
 export PATH=$PATH:$EC2_HOME/bin
 
-# Python
-export PATH="$HOME/.pyenv/bin:$PATH"
-
 # JX
 export PATH=$HOME/.jx/bin/:$PATH
 
@@ -51,3 +48,6 @@ export PATH="/usr/local/sbin:$PATH"
 
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
