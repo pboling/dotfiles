@@ -1,13 +1,16 @@
 [user]
 	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+  signingkey =<%= print("Your Git GPG Signing Key: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
 	co = checkout
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 [color]
 	diff = auto
 	status = auto
 	branch = auto
+	ui = auto
 [core]
 	hooksPath = <%= ENV['HOME'] %>/.git-support/hooks
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
@@ -40,3 +43,7 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
