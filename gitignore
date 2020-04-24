@@ -30,6 +30,8 @@ vendor/bundle
 .byebug_history
 # For Storybook (React, Javascropt)
 storybook-static/
+# For asdf
+.tool-versions
 
 tag_release.sh
 Archive.zip
