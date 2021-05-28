@@ -51,3 +51,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Krew (plugin manager for kubectl)
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
