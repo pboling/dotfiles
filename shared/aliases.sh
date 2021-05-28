@@ -15,6 +15,9 @@ alias git=hub
 # and then shorten it: "g" for "git"
 alias g='git'
 
+# kubernetes
+alias k=kubectl
+
 # gch       => git checkout master
 # gch bugs  => git checkout bugs
 function gch {
@@ -158,6 +161,8 @@ alias brojs='bundle exec rake js:routes'
 alias brc='bundle exec rails c'
 alias brs='bundle exec rails s puma'
 alias brsdfp='DISABLE_FORWARD_PROXY=true bundle exec rails s puma'
+alias rdbdev='RACK_ENV=development brake db:reset'
+alias rdbtest='RACK_ENV=test brake db:drop db:create db:schema:load'
 
 # rspec
 alias best='bundle exec rspec spec'
