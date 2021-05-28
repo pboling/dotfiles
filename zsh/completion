@@ -1,4 +1,4 @@
-autoload -U compinit
+autoload -Uz compinit
 compinit
 
 # matches case insensitive for lowercase
@@ -11,3 +11,4 @@ zstyle ':completion:*' insert-tab pending
 
 # setup kubectl autocomplete
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+complete -F __start_kubectl k
