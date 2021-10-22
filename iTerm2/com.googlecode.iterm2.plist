@@ -304,13 +304,17 @@ Rivi Dev:Restore Window Arrangement</string>
 				<real>0.0</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/pboling/Pictures/Photos Library.photoslibrary/originals/E/E5EFDE39-7CB6-4FA3-84E8-E4C8E1B01288.heic</string>
+			<string>/Volumes/Crucial X8/media/ANS/Camera/IMG_20161201_184829.jpg</string>
+			<key>Background Image Mode</key>
+			<integer>3</integer>
 			<key>Blend</key>
-			<real>0.17452682023195881</real>
+			<real>0.23463459593395158</real>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
-			<false/>
+			<true/>
+			<key>Blur Radius</key>
+			<real>4.4920276398354391</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -677,6 +681,8 @@ Rivi Dev:Restore Window Arrangement</string>
 			<true/>
 			<key>Normal Font</key>
 			<string>Monaco 12</string>
+			<key>Only The Default BG Color Uses Transparency</key>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -943,7 +949,7 @@ Rivi Dev:Restore Window Arrangement</string>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.081362720246010642</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>

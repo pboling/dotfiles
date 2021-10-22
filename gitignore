@@ -1,6 +1,9 @@
 .DS_Store
 .svn
 *~
+# For MacOS
+.__*
+._*
 # For Rails
 *.log
 # For vim:
