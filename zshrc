@@ -9,10 +9,6 @@ autoload -Uz compinit && compinit
 eval "$(direnv hook zsh)"
 
 [[ -s "$HOME/.shared/bourne.sh" ]] && echo "Loading .shared/bourne.sh, human" && source "$HOME/.shared/bourne.sh"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Autoload zsh vcs_info function (-U autoload w/o substition, -z use zsh style)
 autoload -Uz vcs_info
