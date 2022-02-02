@@ -3,19 +3,34 @@
 # Add bin paths, in order of precedence
 export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
 
+# homebrew
+export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
+export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+
 # git
-export PATH="/usr/local/git/bin:$PATH"
+export PATH="/opt/homebrew/opt/git/bin/:$PATH"
 
 # Postgres.app Integration (for latest version)
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+# homebrew postgres - old versions
+# Restart: brew services restart postgresql@12
+#export PATH="/opt/homebrew/Cellar/postgresql@12/12.9_1/bin:$PATH"
+# asdf-postgres
+# start: /Users/pboling/.asdf/installs/postgres/12.9/bin/pg_ctl -D /Users/pboling/.asdf/installs/postgres/12.9/data -l logfile start
+export PATH="/Users/pboling/.asdf/installs/postgres/12.9/bin:$PATH"
 
-# brew install mysql#5.7
-# bundle config build.mysql2 --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include
+# brew install mysql#5.7 with openssl (keg-only, not in path)
+# For compilers to find mysql@5.7 you may need to set:
+#  export LDFLAGS="-L/opt/homebrew/opt/mysql@5.7/lib"
+#  export CPPFLAGS="-I/opt/homebrew/opt/mysql@5.7/include"
+# bundle config build.mysql2 --with-ldflags=-L/opt/homebrew/opt/openssl@3/lib --with-cppflags=-I/opt/homebrew/opt/openssl@3/include
 # Mysql: https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
-# Add man paths
-export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+# Restart: brew services restart mysql@5.7
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
 # Java!
 # The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
@@ -30,8 +45,8 @@ export PATH=$PATH:$EC2_HOME/bin
 # JX
 export PATH=$HOME/.jx/bin/:$PATH
 
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
+export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
 
 # ES
 # https://chartio.com/resources/tutorials/how-to-install-elasticsearch-on-mac-os-x/#manual-elasticsearch-installation
@@ -40,11 +55,10 @@ export ES_HOME=~/src/elasticsearch-6.4.3
 
 export PATH=$ES_HOME/bin:$JAVA_HOME/bin:$PATH
 
+# Trying stock MacOS libxml2, so commenting this out.
 # brew install libxml2
-# bundle config build.libxml-ruby --with-xml2-config=/usr/local/opt/libxml2/bin/xml2-config --with-xml2-dir=/usr/local/opt/libxml2 --with-xml2-lib=/usr/local/opt/libxml2/lib --with-xml2-include=/usr/local/opt/libxml2/include
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-
-export PATH="/usr/local/sbin:$PATH"
+# bundle config build.libxml-ruby --with-xml2-config=/opt/homebrew/opt/libxml2/bin/xml2-config --with-xml2-dir=/opt/homebrew/opt/libxml2 --with-xml2-lib=/opt/homebrew/opt/libxml2/lib --with-xml2-include=/opt/homebrew/opt/libxml2/include
+# export PATH="/opt/homebrew/opt/libxml2/bin:$PATH"
 
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
