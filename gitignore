@@ -35,6 +35,17 @@ vendor/bundle
 storybook-static/
 # For asdf
 .tool-versions
+# For Hugo
+.hugo_build.lock
+
+# For asdf-postgres
+logfile
+
+# For asdf-redis
+dump.rdb
 
 tag_release.sh
 Archive.zip
+
+# Local Project secrets and config 
+.env
