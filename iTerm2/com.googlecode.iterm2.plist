@@ -6,11 +6,19 @@
 	<true/>
 	<key>AboutToPasteTabsWithCancel_selection</key>
 	<integer>2</integer>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>Default Arrangement Name</key>
 	<string>Rivi Dev</string>
 	<key>Default Bookmark Guid</key>
 	<string>54371BBB-8B90-4EB0-B8A0-846253B22281</string>
+	<key>DimBackgroundWindows</key>
+	<false/>
+	<key>DimOnlyText</key>
+	<false/>
 	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
+	<key>EnableProxyIcon</key>
 	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
@@ -304,7 +312,7 @@ Rivi Dev:Restore Window Arrangement</string>
 				<real>0.0</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Volumes/Crucial X8/media/ANS/Camera/IMG_20161201_184829.jpg</string>
+			<string>/Users/pboling/Documents/Backgrounds/TERM_BG-ANS.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>3</integer>
 			<key>Blend</key>
@@ -680,7 +688,7 @@ Rivi Dev:Restore Window Arrangement</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>Monaco 16</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -7717,6 +7725,8 @@ Rivi Dev:Restore Window Arrangement</string>
 	<true/>
 	<key>SavePasteHistory</key>
 	<true/>
+	<key>SeparateStatusBarsPerPane</key>
+	<false/>
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SoundForEsc</key>
@@ -7727,6 +7737,8 @@ Rivi Dev:Restore Window Arrangement</string>
 	<array>
 		<string>Profiles</string>
 	</array>
+	<key>UseBorder</key>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>Window Arrangements</key>
