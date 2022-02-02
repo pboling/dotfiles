@@ -11,4 +11,4 @@ zstyle ':completion:*' insert-tab pending
 
 # setup kubectl autocomplete
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
-complete -F __start_kubectl k
+compdef __start_kubectl k
