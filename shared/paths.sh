@@ -15,10 +15,12 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 export PATH="/opt/homebrew/opt/git/bin/:$PATH"
 
 # Postgres.app Integration (for latest version)
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+#export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
 # homebrew postgres - old versions
 # Restart: brew services restart postgresql@12
 #export PATH="/opt/homebrew/Cellar/postgresql@12/12.9_1/bin:$PATH"
+
 # asdf-postgres
 # start: /Users/pboling/.asdf/installs/postgres/12.9/bin/pg_ctl -D /Users/pboling/.asdf/installs/postgres/12.9/data -l logfile start
 export PATH="/Users/pboling/.asdf/installs/postgres/12.9/bin:$PATH"
