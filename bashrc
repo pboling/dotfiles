@@ -2,13 +2,13 @@ source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/paths
 
-[[ -s "$HOME/.shared/bourne.sh" ]] && echo "Loading .shared/bourne.sh, human" && source "$HOME/.shared/bourne.sh"
+[[ -s "$HOME/.shared/bourne.sh" ]] && source "$HOME/.shared/bourne.sh"
 
 source ~/.bash/config
 
 # Bash shell completions are for Bash only.
 ASDF_HOME=$(brew --prefix asdf)
-[[ -f "$ASDF_HOME/etc/bash_completions.d/asdf.bash" ]] && echo "Loading asdf bash shell completions, human" && source "$ASDF_HOME/etc/bash_completions.d/asdf.bash"
+[[ -f "$ASDF_HOME/etc/bash_completions.d/asdf.bash" ]] && source "$ASDF_HOME/etc/bash_completions.d/asdf.bash"
 
 # alias laptop='bash <(curl -s https://raw.githubusercontent.com/18F/laptop/master/laptop)'
 
@@ -39,3 +39,7 @@ export GPG_TTY=$(tty)
 # if [ -f $LUNCHY_DIR/lunchy-completion.bash ]; then
 #   . $LUNCHY_DIR/lunchy-completion.bash
 # fi
+
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kube-ps1
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+PS1='[\u@\h \W $(kube_ps1)]\$ '

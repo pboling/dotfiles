@@ -9,10 +9,10 @@ umask 0002
 
 # Setup asdf version manager
 ASDF_HOME=$(brew --prefix asdf)
-[[ -f "$ASDF_HOME/asdf.sh" ]] && echo "Loading asdf, human" && source "$ASDF_HOME/asdf.sh"
+[[ -f "$ASDF_HOME/asdf.sh" ]] && source "$ASDF_HOME/asdf.sh"
 
 # rbenv setup ($PATH and shell completions)
 #eval "$(rbenv init -)"
 
 # use .localrc for settings specific to one system
-[[ -f "$HOME/.localrc" ]] && echo "Loading your .localrc, human" && source "$HOME/.localrc"
+[[ -f "$HOME/.localrc" ]] && source "$HOME/.localrc"
