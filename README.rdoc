@@ -10,7 +10,7 @@ git, hub, asdf, pyenv, {gpg}[https://gpgtools.org/]
 
 == Installation
 
-  git clone git://github.com/pboling/dotfiles ~/Documents/src/dotfiles
+  git clone git@github.com:pboling/dotfiles.git ~/Documents/src/dotfiles
   ln -s $HOME/Documents/src/dotfiles ~/.dotfiles
   cd ~/.dotfiles
   rake install
