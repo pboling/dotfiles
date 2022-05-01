@@ -34,6 +34,10 @@ export PATH="/Users/pboling/.asdf/installs/postgres/12.9/bin:$PATH"
 # Restart: brew services restart mysql@5.7
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
+# PHP
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+
 # Java!
 # The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
 export JAVA_HOME=`/usr/libexec/java_home -v 13`
