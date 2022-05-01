@@ -87,7 +87,7 @@ function grabdef {
 
 alias gb='git branch'
 alias gbr='git branch -a -v'
-alias gbDA='git branch | egrep -v "\*|\s+(master|development|develop|staging|rc|quality)" | xargs git branch -D'
+alias gbDA='git branch | egrep -v "\*|\s+(main|master|development|develop|dev|staging|stage|rc|quality)" | xargs git branch -D'
 alias gad='git add'
 alias gadd='git add .'
 alias gap='git add --patch'
@@ -129,6 +129,9 @@ alias gsfrp='god && git stash && git svn fetch && git svn rebase && git stash po
 alias shbase='god && git stash save \"stash during rebase\" && gsfr && git stash pop && gres'
 alias gsl='git svn log'
 
+# asdf-ruby
+alias mri='asdf list-all ruby | grep -e "^\d"'
+
 # rails
 alias tlog='tail -f log/development.log'
 alias migrate='rake db:migrate db:test:clone'
@@ -141,7 +144,6 @@ alias bin='bundle install'
 alias biv='bundle install --path vendor'
 alias bpk='bundle package'
 alias bup='bundle update'
-alias bec='bundle exec'
 alias bspec='bundle exec rspec'
 alias pspec='bundle exec parallel_rspec'
 alias pspec2='TEST_ENV_NUMBER=2 bundle exec rspec'
