@@ -17,6 +17,10 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 # Add man paths
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
+# PHP
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+
 # Java!
 # The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
 export JAVA_HOME=`/usr/libexec/java_home -v 13`
