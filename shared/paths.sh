@@ -11,6 +11,10 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
+# Node
+# Support SSL Cert from mkcert with NodeJS
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+
 # git
 export PATH="/opt/homebrew/opt/git/bin/:$PATH"
 
