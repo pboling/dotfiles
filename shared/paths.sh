@@ -3,6 +3,18 @@
 # Add bin paths, in order of precedence
 export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
 
+# homebrew
+export HOMEBREW_PREFIX="/usr/local/Homebrew";
+export HOMEBREW_CELLAR="/usr/local/Cellar/";
+export HOMEBREW_REPOSITORY="/usr/local/Homebrew";
+export PATH="/usr/local/Homebrew/bin:/usr/local/Homebrew/sbin${PATH+:$PATH}";
+export MANPATH="/usr/local/Homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/usr/local/Homebrew/share/info:${INFOPATH:-}";
+
+# Node
+# Support SSL Cert from mkcert with NodeJS
+# export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+
 # git
 export PATH="/usr/local/git/bin:$PATH"
 
@@ -16,10 +28,6 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # Add man paths
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
-
-# PHP
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 
 # Java!
 # The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
