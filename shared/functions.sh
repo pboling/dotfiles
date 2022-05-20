@@ -19,14 +19,17 @@ function cud {
 function psqlsrv {
     local version="${1:-12.8}"
     local action="${2:-start}"
+    mkdir -p ~/.asdf/installs/postgres/$version/data
     ~/.asdf/installs/postgres/$version/bin/pg_ctl -D ~/.asdf/installs/postgres/$version/data -l logfile $action
 }
 function mongosrv {
-    local version="${1:-3.2.9}"
+    local version="${1:-4.2.9}"
     local port="${2:-27017}"
+    mkdir -p ~/.asdf/installs/mongodb/$version/data
     ~/.asdf/installs/mongodb/$version/bin/mongod --dbpath ~/.asdf/installs/mongodb/$version/data --port $port
 }
 function elasticsrv {
     local version="${1:-6.8.21}"
+    mkdir -p ~/.asdf/installs/elasticsearch/$version/data
     ~/.asdf/installs/elasticsearch/$version/bin/elasticsearch
 }
