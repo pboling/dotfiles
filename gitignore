@@ -47,5 +47,8 @@ dump.rdb
 tag_release.sh
 Archive.zip
 
+# rubygem development
+*.gem
+
 # Local Project secrets and config 
 .env
