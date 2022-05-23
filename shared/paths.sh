@@ -11,6 +11,9 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
+# git & overcommit (enable on per project basis)
+OVERCOMMIT_DISABLE=1
+
 # Node
 # Support SSL Cert from mkcert with NodeJS
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
