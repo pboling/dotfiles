@@ -30,7 +30,7 @@ export PATH="/opt/homebrew/opt/git/bin/:$PATH"
 
 # asdf-postgres
 # start: /Users/pboling/.asdf/installs/postgres/12.9/bin/pg_ctl -D /Users/pboling/.asdf/installs/postgres/12.9/data -l logfile start
-export PATH="/Users/pboling/.asdf/installs/postgres/12.9/bin:$PATH"
+#export PATH="/Users/pboling/.asdf/installs/postgres/12.9/bin:$PATH"
 
 # brew install mysql#5.7 with openssl (keg-only, not in path)
 # For compilers to find mysql@5.7 you may need to set:
@@ -39,11 +39,11 @@ export PATH="/Users/pboling/.asdf/installs/postgres/12.9/bin:$PATH"
 # bundle config build.mysql2 --with-ldflags=-L/opt/homebrew/opt/openssl@3/lib --with-cppflags=-I/opt/homebrew/opt/openssl@3/include
 # Mysql: https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
 # Restart: brew services restart mysql@5.7
-export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+#export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
 # PHP
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+#export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+#export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 
 # Java!
 # The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
@@ -56,7 +56,7 @@ export EC2_HOME=$HOME/.ec2/tools
 export PATH=$PATH:$EC2_HOME/bin
 
 # JX
-export PATH=$HOME/.jx/bin/:$PATH
+#export PATH=$HOME/.jx/bin/:$PATH
 
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
@@ -64,7 +64,7 @@ export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
 # ES
 # https://chartio.com/resources/tutorials/how-to-install-elasticsearch-on-mac-os-x/#manual-elasticsearch-installation
 # export ES_HOME=~/src/elasticsearch-6.8.4
-export ES_HOME=~/src/elasticsearch-6.4.3
+# export ES_HOME=~/src/elasticsearch-6.4.3
 
 export PATH=$ES_HOME/bin:$JAVA_HOME/bin:$PATH
 
@@ -80,4 +80,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Krew (plugin manager for kubectl)
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+# export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+### KUBECONFIG PATHS
+export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
