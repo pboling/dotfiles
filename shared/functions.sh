@@ -17,7 +17,7 @@ function cud {
     local project="${1:-api}"
     cd ~/src/uds/$project; }
 function psqlsrv {
-    local version="${1:-12.8}"
+    local version="${1:-14.5}"
     local action="${2:-start}"
     mkdir -p ~/.asdf/installs/postgres/$version/data
     ~/.asdf/installs/postgres/$version/bin/pg_ctl -D ~/.asdf/installs/postgres/$version/data -l logfile $action
@@ -32,4 +32,12 @@ function elasticsrv {
     local version="${1:-6.8.21}"
     mkdir -p ~/.asdf/installs/elasticsearch/$version/data
     ~/.asdf/installs/elasticsearch/$version/bin/elasticsearch
+}
+function newline_at_eof {
+    if [[ -s "$1" && -z "$(tail -c 1 "$1")" ]]
+    then
+        echo "Newline at end of file!"
+    else
+        echo "No newline at end of file!"
+    fi
 }
