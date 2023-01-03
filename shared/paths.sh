@@ -66,3 +66,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Krew (plugin manager for kubectl)
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+### Istioctl Client Tool (installed via Homebrew)
+export PATH="$PATH:/Users/pboling/istio-1.15.0/bin"
