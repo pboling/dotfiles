@@ -84,3 +84,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### KUBECONFIG PATHS
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
+
+### Istioctl Client Tool (installed via Homebrew)
+export PATH="$PATH:/Users/pboling/istio-1.15.0/bin"
