@@ -39,3 +39,6 @@ export GPG_TTY=$(tty)
 # if [ -f $LUNCHY_DIR/lunchy-completion.bash ]; then
 #   . $LUNCHY_DIR/lunchy-completion.bash
 # fi
+
+# Set Java Home
+. ~/.asdf/plugins/java/set-java-home.bash
