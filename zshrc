@@ -169,3 +169,6 @@ source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
 GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
+
+# Set Java Home
+[[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && source "$HOME/.asdf/plugins/java/set-java-home.zsh"
