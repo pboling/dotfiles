@@ -1,14 +1,20 @@
+# Setup asdf
+[[ -s "$HOME/.shared/asdf.sh" ]] && source "$HOME/.shared/asdf.sh"
+
+# Set Java Home before setting paths
+[[ -f "$HOME/.asdf/plugins/java/set-java-home.bash" ]] && source "$HOME/.asdf/plugins/java/set-java-home.bash"
+
 source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/paths
 
 [[ -s "$HOME/.shared/bourne.sh" ]] && source "$HOME/.shared/bourne.sh"
 
-source ~/.bash/config
-
-# Bash shell completions are for Bash only.
+# Completions are not shared between bash and ZSH and so are not loaded by bourne.sh
 ASDF_HOME=$(brew --prefix asdf)
 [[ -f "$ASDF_HOME/etc/bash_completions.d/asdf.bash" ]] && source "$ASDF_HOME/etc/bash_completions.d/asdf.bash"
+
+source ~/.bash/config
 
 # alias laptop='bash <(curl -s https://raw.githubusercontent.com/18F/laptop/master/laptop)'
 
@@ -43,6 +49,3 @@ export GPG_TTY=$(tty)
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kube-ps1
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PS1='[\u@\h \W $(kube_ps1)]\$ '
-
-# Set Java Home
-. ~/.asdf/plugins/java/set-java-home.bash

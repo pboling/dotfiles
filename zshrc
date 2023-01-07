@@ -5,6 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Setup asdf
+[[ -s "$HOME/.shared/asdf.sh" ]] && source "$HOME/.shared/asdf.sh"
+
+# Set Java Home before setting paths
+ASDF_HOME=$(brew --prefix asdf)
+[[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && source "$HOME/.asdf/plugins/java/set-java-home.zsh"
+
 . ~/.zsh/paths
 . ~/.zsh/config
 . ~/.zsh/aliases
@@ -169,6 +176,3 @@ source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
 GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
-
-# Set Java Home
-[[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && source "$HOME/.asdf/plugins/java/set-java-home.zsh"

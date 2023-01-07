@@ -3,14 +3,6 @@
 # Add bin paths, in order of precedence
 export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
 
-# homebrew
-export HOMEBREW_PREFIX="/opt/homebrew";
-export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
-export HOMEBREW_REPOSITORY="/opt/homebrew";
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
-export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
-export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
-
 # git & overcommit (enable on per project basis)
 OVERCOMMIT_DISABLE=1
 
@@ -46,8 +38,6 @@ export PATH="/opt/homebrew/opt/git/bin/:$PATH"
 #export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 
 # Java!
-# The warning `Unable to find any JVMs matching version <#>` comes from this being out of sync with current installed JDK
-export JAVA_HOME=`/usr/libexec/java_home -v 13`
 
 # EC2 tools
 export EC2_HOME=$HOME/.ec2/tools
