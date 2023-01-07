@@ -29,4 +29,4 @@ RUBY_VERSION="$(asdf current ruby | awk '{print $2}')"
 PS1='%(?:%{\%}%F{green}➜$?➜%f :%{\%}%F{red}➜$?➜%f ) ${TIME} %F{cyan}%n@%m%f${NEWLINE}%F{white}%/%f$vcs_info_msg_0_ %F{magenta}ruby-${RUBY_VERSION}%f ${NEWLINE}$ '
 
 # Set Java Home
-. ~/.asdf/plugins/java/set-java-home.zsh
+[[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && echo "Setting up Java, human" && source "$HOME/.asdf/plugins/java/set-java-home.zsh"

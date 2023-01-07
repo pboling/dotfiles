@@ -6,9 +6,8 @@ source ~/.bash/paths
 
 source ~/.bash/config
 
-# Bash shell completions are for Bash only.
-ASDF_HOME=$(brew --prefix asdf)
-[[ -f "$ASDF_HOME/etc/bash_completions.d/asdf.bash" ]] && echo "Loading asdf bash shell completions, human" && source "$ASDF_HOME/etc/bash_completions.d/asdf.bash"
+# Completions are not shared between bash and ZSH and so are not loaded by bourne.sh
+[[ -f "$HOME/.asdf/completions/asdf.bash" ]] && echo "Loading asdf completions, human" && source "$HOME/.asdf/completions/asdf.bash"
 
 # alias laptop='bash <(curl -s https://raw.githubusercontent.com/18F/laptop/master/laptop)'
 
@@ -41,4 +40,4 @@ export GPG_TTY=$(tty)
 # fi
 
 # Set Java Home
-. ~/.asdf/plugins/java/set-java-home.bash
+[[ -f "$HOME/.asdf/plugins/java/set-java-home.bash" ]] && echo "Setting up Java, human" && source "$HOME/.asdf/plugins/java/set-java-home.bash"

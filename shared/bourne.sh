@@ -8,7 +8,7 @@ export GPG_TTY=$(tty)
 umask 0002
 
 # Setup asdf version manager
-ASDF_HOME=$(brew --prefix asdf)
+ASDF_HOME=$HOME/.asdf
 [[ -f "$ASDF_HOME/asdf.sh" ]] && echo "Loading asdf, human" && source "$ASDF_HOME/asdf.sh"
 
 # rbenv setup ($PATH and shell completions)
