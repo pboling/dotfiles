@@ -37,8 +37,6 @@ export PATH="/opt/homebrew/opt/git/bin/:$PATH"
 #export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
 #export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 
-# Java!
-
 # EC2 tools
 export EC2_HOME=$HOME/.ec2/tools
 
@@ -50,6 +48,9 @@ export PATH=$PATH:$EC2_HOME/bin
 
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
+
+# GNU tools
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 
 # ES
 # https://chartio.com/resources/tutorials/how-to-install-elasticsearch-on-mac-os-x/#manual-elasticsearch-installation
