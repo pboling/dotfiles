@@ -12,3 +12,5 @@ eval "$(hub alias -s)"
 
 # use .localrc for settings specific to one system
 [[ -f "$HOME/.localrc" ]] && source "$HOME/.localrc"
+
+export LANG=en_US.UTF-8
