@@ -1,4 +1,1 @@
 [[ -s "$HOME/.shared/paths.sh" ]] && source "$HOME/.shared/paths.sh"
-
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
