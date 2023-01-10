@@ -130,7 +130,7 @@ alias shbase='god && git stash save \"stash during rebase\" && gsfr && git stash
 alias gsl='git svn log'
 
 # asdf-ruby
-alias mri='asdf list-all ruby | grep -e "^\d"'
+alias mri='asdf list-all ruby | grep -Ei "^[0-9]"'
 
 # rails
 alias tlog='tail -f log/development.log'
