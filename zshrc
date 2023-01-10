@@ -7,9 +7,7 @@ fi
 
 # Setup asdf
 [[ -s "$HOME/.shared/asdf.sh" ]] && source "$HOME/.shared/asdf.sh"
-
 # Set Java Home before setting paths
-ASDF_HOME=$(brew --prefix asdf)
 [[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && source "$HOME/.asdf/plugins/java/set-java-home.zsh"
 
 . ~/.zsh/paths
@@ -37,11 +35,11 @@ zstyle ':vcs_info:*' stagedstr ' +'
 # Set the format of the Git information for vcs_info
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
+# Old Bash PS1, now using Powerline10k instead
 # NEWLINE=$'\n'
 # TIME='[%F{yellow} %D{%Y-%m-%d %H:%M:%S.%.} %f] '
 # RUBY_VERSION="$(asdf current ruby | awk '{print $2}')"
 # PS1='%(?:%{\%}%F{green}➜$?➜%f :%{\%}%F{red}➜$?➜%f ) ${TIME} %F{cyan}%n@%m%f${NEWLINE}%F{white}%/%f$vcs_info_msg_0_ %F{magenta}ruby-${RUBY_VERSION}%f ${NEWLINE}$ '
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
