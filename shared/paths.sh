@@ -1,7 +1,10 @@
-# export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
+LOCAL_BIN='/usr/local/bin'
+BREW_BIN='/opt/homebrew/bin'
+
+export PATH=/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 
 # Add bin paths, in order of precedence
-export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$LOCAL_BIN:$BREW_BIN:$PATH"
 
 # git & overcommit (enable on per project basis)
 OVERCOMMIT_DISABLE=1
@@ -41,7 +44,7 @@ export PATH="/opt/homebrew/opt/git/bin/:$PATH"
 export EC2_HOME=$HOME/.ec2/tools
 
 # Add EC2 tools to path
-export PATH=$PATH:$EC2_HOME/bin
+export PATH=$EC2_HOME/bin:$PATH
 
 # JX
 #export PATH=$HOME/.jx/bin/:$PATH
@@ -56,8 +59,7 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 # https://chartio.com/resources/tutorials/how-to-install-elasticsearch-on-mac-os-x/#manual-elasticsearch-installation
 # export ES_HOME=~/src/elasticsearch-6.8.4
 # export ES_HOME=~/src/elasticsearch-6.4.3
-
-export PATH=$ES_HOME/bin:$JAVA_HOME/bin:$PATH
+#export PATH=$ES_HOME/bin:$PATH
 
 # Trying stock MacOS libxml2, so commenting this out.
 # brew install libxml2
@@ -77,4 +79,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 
 ### Istioctl Client Tool (installed via Homebrew)
-export PATH="$PATH:/Users/pboling/istio-1.15.0/bin"
+export PATH="$HOME/istio-1.15.0/bin:$PATH"
