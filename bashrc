@@ -46,6 +46,7 @@ export GPG_TTY=$(tty)
 #   . $LUNCHY_DIR/lunchy-completion.bash
 # fi
 
+# TODO: Test this out later for bash prompt PS1
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kube-ps1
-source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
-PS1='[\u@\h \W $(kube_ps1)]\$ '
+# source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+# PS1='[\u@\h \W $(kube_ps1)]\$ '
