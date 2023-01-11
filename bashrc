@@ -1,17 +1,20 @@
-# Setup asdf
-[[ -s "$HOME/.shared/asdf.sh" ]] && source "$HOME/.shared/asdf.sh"
+# Will wipe out any pre-existing PATH setting, so do this first!
+source ~/.bash/paths
+source ~/.bash/aliases
+source ~/.bash/completions
+source ~/.bash/functions
+
+# Setup Homebrew
+[[ -s "$HOME/.shared/brew.sh" ]] && source "$HOME/.shared/brew.sh"
+
+# Setup asdf version manager
+export ASDF_HOME=$(brew --prefix asdf)
+[[ -f "$ASDF_HOME/libexec/asdf.sh" ]] && source "$ASDF_HOME/libexec/asdf.sh"
 
 # Set Java Home before setting paths
 [[ -f "$HOME/.asdf/plugins/java/set-java-home.bash" ]] && source "$HOME/.asdf/plugins/java/set-java-home.bash"
 
-source ~/.bash/aliases
-source ~/.bash/completions
-source ~/.bash/paths
-
 [[ -s "$HOME/.shared/bourne.sh" ]] && source "$HOME/.shared/bourne.sh"
-
-# Completions are not shared between bash and ZSH and so are not loaded by bourne.sh
-[[ -f "$ASDF_HOME/etc/bash_completion.d/asdf.bash" ]] && echo "loading asdf bash completions" && source "$ASDF_HOME/etc/bash_completion.d/asdf.bash"
 
 source ~/.bash/config
 

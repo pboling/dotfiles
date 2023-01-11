@@ -1,10 +1,13 @@
+HOME_BIN="$HOME/bin"
+DOT_BIN="$HOME/.bin"
+DOTLOCAL_BIN="$HOME/.local/bin"
 LOCAL_BIN='/usr/local/bin'
 BREW_BIN='/opt/homebrew/bin'
 
 export PATH=/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 
 # Add bin paths, in order of precedence
-export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$LOCAL_BIN:$BREW_BIN:$PATH"
+export PATH="$HOME_BIN:$DOT_BIN:$DOTLOCAL_BIN:$LOCAL_BIN:$BREW_BIN:$PATH"
 
 # git & overcommit (enable on per project basis)
 OVERCOMMIT_DISABLE=1

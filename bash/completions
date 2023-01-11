@@ -5,3 +5,6 @@ complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap
 
 # add autocomplete permanently to your bash shell.
 source <(kubectl completion bash)
+
+# Completions are not shared between bash and ZSH and so are not loaded by bourne.sh
+[[ -f "$ASDF_HOME/etc/bash_completion.d/asdf.bash" ]] && echo "loading asdf bash completions" && source "$ASDF_HOME/etc/bash_completion.d/asdf.bash"

@@ -1,0 +1,7 @@
+# Better PATH (with new lines)
+function path(){
+    old=$IFS
+    IFS=:
+    printf "%s\n" $PATH
+    IFS=$old
+}
