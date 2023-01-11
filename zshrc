@@ -166,8 +166,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# TODO: See if this is already integrated with p10k via plugin
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kube-ps1
-source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
-PS1='$(kube_ps1)'$PS1
+# source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+# PS1='$(kube_ps1)'$PS1
 
 GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
