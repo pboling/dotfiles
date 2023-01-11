@@ -115,7 +115,6 @@ alias gsoft='git reset --soft HEAD'
 alias gback='git reset --soft HEAD\^'
 alias gash='git stash'
 alias gashp='git stash pop'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gcl="git clean -d -f"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
