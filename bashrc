@@ -11,8 +11,7 @@ source ~/.bash/paths
 [[ -s "$HOME/.shared/bourne.sh" ]] && source "$HOME/.shared/bourne.sh"
 
 # Completions are not shared between bash and ZSH and so are not loaded by bourne.sh
-ASDF_HOME=$(brew --prefix asdf)
-[[ -f "$ASDF_HOME/etc/bash_completions.d/asdf.bash" ]] && source "$ASDF_HOME/etc/bash_completions.d/asdf.bash"
+[[ -f "$ASDF_HOME/etc/bash_completion.d/asdf.bash" ]] && echo "loading asdf bash completions" && source "$ASDF_HOME/etc/bash_completion.d/asdf.bash"
 
 source ~/.bash/config
 
