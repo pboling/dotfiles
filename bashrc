@@ -35,9 +35,6 @@ export GPG_TTY=$(tty)
 # NPM & n
 #export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH="$N_PREFIX/bin:$PATH"  # Added by n-install (see http://git.io/n-install-repo).
 
-# Allow write permissions as group (homebrewers or staff)
-#umask 0002
-
 # lunchy gem for controlling postgres:
 #   $ lunchy start postgres
 #   $ lunchy stop postgres
