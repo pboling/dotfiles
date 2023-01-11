@@ -16,9 +16,6 @@ fi
 
 autoload -Uz compinit && compinit
 
-# direnv setup
-eval "$(direnv hook zsh)"
-
 [[ -s "$HOME/.shared/bourne.sh" ]] && source "$HOME/.shared/bourne.sh"
 
 # Setup asdf version manager - handled by p10k asdf plugin
@@ -178,3 +175,6 @@ source $ZSH/oh-my-zsh.sh
 GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
 
 export ASDF_HOME=$(brew --prefix asdf)
+
+# direnv setup needs to be after prompt modifications
+eval "$(direnv hook zsh)"

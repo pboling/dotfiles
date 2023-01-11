@@ -49,3 +49,6 @@ export GPG_TTY=$(tty)
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kube-ps1
 # source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 # PS1='[\u@\h \W $(kube_ps1)]\$ '
+
+# direnv setup needs to be after prompt modifications
+eval "$(direnv hook bash)"
