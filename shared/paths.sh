@@ -14,6 +14,10 @@ OVERCOMMIT_DISABLE=1
 
 # Node
 # Support SSL Cert from mkcert with NodeJS
+# - https://zellwk.com/blog/serving-https-locally-with-node/
+# brew install mkcert
+# brew install nss # Required for Firefox
+# mkcert -install
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
 # git
