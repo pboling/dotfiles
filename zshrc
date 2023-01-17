@@ -5,8 +5,13 @@
 
 autoload -Uz compinit && compinit
 
-# direnv setup
-eval "$(direnv hook zsh)"
+# JAVA
+# Install Java: https://whichjdk.com/#adoptium-eclipse-temurin
+# asdf plugin add java
+# asdf list all java | grep -e "^temurin-\d"
+# asdf install java temurin-17.0.5+8
+# asdf global java temurin-17.0.5+8
+[[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && echo "Setting up Java, human" && source "$HOME/.asdf/plugins/java/set-java-home.zsh"
 
 [[ -s "$HOME/.shared/bourne.sh" ]] && echo "Loading .shared/bourne.sh, human" && source "$HOME/.shared/bourne.sh"
 
@@ -28,5 +33,5 @@ TIME='[%F{yellow} %D{%Y-%m-%d %H:%M:%S.%.} %f] '
 RUBY_VERSION="$(asdf current ruby | awk '{print $2}')"
 PS1='%(?:%{\%}%F{green}➜$?➜%f :%{\%}%F{red}➜$?➜%f ) ${TIME} %F{cyan}%n@%m%f${NEWLINE}%F{white}%/%f$vcs_info_msg_0_ %F{magenta}ruby-${RUBY_VERSION}%f ${NEWLINE}$ '
 
-# Set Java Home
-[[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && echo "Setting up Java, human" && source "$HOME/.asdf/plugins/java/set-java-home.zsh"
+# direnv setup
+eval "$(direnv hook zsh)"
