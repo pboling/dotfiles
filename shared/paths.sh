@@ -8,16 +8,14 @@ export PATH="$HOME_BIN:$DOT_BIN:$DOTLOCAL_BIN:$PATH"
 
 # Node
 # Support SSL Cert from mkcert with NodeJS
+# - https://zellwk.com/blog/serving-https-locally-with-node/
+# brew install mkcert
+# brew install nss # Required for Firefox
+# mkcert -install
 # export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
 # Postgres.app Integration (for latest version)
 # export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
-
-# brew install mysql#5.7
-# bundle config build.mysql2 --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include
-# Mysql: https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
-# It seems mysql is being added to the PATH somewhere else.
-# export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # Add man paths
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
@@ -43,3 +41,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ### Krew (plugin manager for kubectl)
 [[ -d "${KREW_ROOT:-$HOME/.krew}" ]] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+### KUBECONFIG PATHS
+export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
