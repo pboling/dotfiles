@@ -20,9 +20,6 @@ OVERCOMMIT_DISABLE=1
 # mkcert -install
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
-# git
-export PATH="/opt/homebrew/opt/git/bin/:$PATH"
-
 # Postgres.app Integration (for latest version)
 #export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
