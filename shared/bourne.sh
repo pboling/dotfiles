@@ -6,21 +6,16 @@ umask 0002
 
 # Setup asdf version manager
 export ASDF_HOME=$(brew --prefix asdf)
-[[ -f "$ASDF_HOME/libexec/asdf.sh" ]] && source "$ASDF_HOME/libexec/asdf.sh"
-
-# JAVA
-# Install Java: https://whichjdk.com/#adoptium-eclipse-temurin
-# asdf plugin add java
-# asdf list all java | grep -e "^temurin-\d"
-# asdf install java temurin-17.0.5+8
-# asdf global java temurin-17.0.5+8
-[[ -f "$HOME/.asdf/plugins/java/set-java-home.bash" ]] && source "$HOME/.asdf/plugins/java/set-java-home.bash"
+if [[ -f "$ASDF_HOME/libexec/asdf.sh" ]]; then
+  source "$ASDF_HOME/libexec/asdf.sh"
+  [[ -s "$HOME/.shared/asdf.sh" ]] && source "$HOME/.shared/asdf.sh"
+fi
 
 # Hub! for Github integration with Git
 eval "$(hub alias -s)"
 
-# rbenv setup ($PATH and shell completions)
-#eval "$(rbenv init -)"
+# git & overcommit (enable on per project basis)
+export OVERCOMMIT_DISABLE=1
 
 # use .localrc for settings specific to one system
 [[ -f "$HOME/.localrc" ]] && source "$HOME/.localrc"

@@ -1,5 +1,4 @@
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 
 # matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -12,3 +11,6 @@ zstyle ':completion:*' insert-tab pending
 # setup kubectl autocomplete
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 compdef __start_kubectl k
+
+# Completions are not shared between bash and ZSH and so are not loaded by bourne.sh
+# For ZSH the completions are loaded by the asdf plugin for zsh

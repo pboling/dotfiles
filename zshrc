@@ -5,23 +5,17 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Will wipe out any pre-existing PATH setting, so do this first!
 . ~/.zsh/paths
 . ~/.zsh/config
 . ~/.zsh/aliases
-. ~/.zsh/completion
 
 # Setup Homebrew
 [[ -s "$HOME/.shared/brew.sh" ]] && source "$HOME/.shared/brew.sh"
 
-autoload -Uz compinit && compinit
-
+# Sets up asdf, Depends on Homebrew
 [[ -s "$HOME/.shared/bourne.sh" ]] && source "$HOME/.shared/bourne.sh"
 
-# Setup asdf version manager - handled by p10k asdf plugin
-
-# Set Java Home before setting paths
-[[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && source "$HOME/.asdf/plugins/java/set-java-home.zsh"
+. ~/.zsh/completion
 
 # Autoload zsh vcs_info function (-U autoload w/o substition, -z use zsh style)
 autoload -Uz vcs_info
@@ -173,8 +167,6 @@ source $ZSH/oh-my-zsh.sh
 # PS1='$(kube_ps1)'$PS1
 
 GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
-
-export ASDF_HOME=$(brew --prefix asdf)
 
 # direnv setup needs to be after prompt modifications
 eval "$(direnv hook zsh)"
