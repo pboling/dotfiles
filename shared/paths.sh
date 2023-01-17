@@ -1,13 +1,9 @@
 HOME_BIN="$HOME/bin"
 DOT_BIN="$HOME/.bin"
 DOTLOCAL_BIN="$HOME/.local/bin"
-LOCAL_BIN='/usr/local/bin'
-BREW_BIN='/opt/homebrew/bin'
-
-export PATH=/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 
 # Add bin paths, in order of precedence
-export PATH="$HOME_BIN:$DOT_BIN:$DOTLOCAL_BIN:$LOCAL_BIN:$BREW_BIN:$PATH"
+export PATH="$HOME_BIN:$DOT_BIN:$DOTLOCAL_BIN:$PATH"
 
 # git & overcommit (enable on per project basis)
 OVERCOMMIT_DISABLE=1
@@ -45,16 +41,14 @@ export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 #export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 
 # EC2 tools
-export EC2_HOME=$HOME/.ec2/tools
-
-# Add EC2 tools to path
-export PATH=$EC2_HOME/bin:$PATH
+if [[ -d $HOME/.ec2/tools ]]; then
+  export EC2_HOME=$HOME/.ec2/tools
+  # Add EC2 tools to path
+  export PATH=$PATH:$EC2_HOME/bin
+fi
 
 # JX
-#export PATH=$HOME/.jx/bin/:$PATH
-
-export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
-export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
+[[ -d "$HOME/.jx/bin/" ]] && export PATH=$HOME/.jx/bin/:$PATH
 
 # GNU tools
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
@@ -65,22 +59,11 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 # export ES_HOME=~/src/elasticsearch-6.4.3
 #export PATH=$ES_HOME/bin:$PATH
 
-# Trying stock MacOS libxml2, so commenting this out.
-# brew install libxml2
-# bundle config build.libxml-ruby --with-xml2-config=/opt/homebrew/opt/libxml2/bin/xml2-config --with-xml2-dir=/opt/homebrew/opt/libxml2 --with-xml2-lib=/opt/homebrew/opt/libxml2/lib --with-xml2-include=/opt/homebrew/opt/libxml2/include
-# export PATH="/opt/homebrew/opt/libxml2/bin:$PATH"
-
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 ### Krew (plugin manager for kubectl)
-# export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+[[ -d "${KREW_ROOT:-$HOME/.krew}" ]] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 ### KUBECONFIG PATHS
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
-
-### Istioctl Client Tool (installed via Homebrew)
-export PATH="$HOME/istio-1.15.0/bin:$PATH"
