@@ -41,3 +41,19 @@ function newline_at_eof {
         echo "No newline at end of file!"
     fi
 }
+function gnuon {
+  local gnu_packages=(
+    coreutils
+    findutils
+    grep
+    gnu-sed
+    gnu-tar
+  )
+  local i
+  for i in "${gnu_packages[@]}"; do
+    if [[ -d "/usr/local/opt/${i}" ]]; then
+      export PATH="/usr/local/opt/${i}/libexec/gnubin:$PATH"
+      export MANPATH="/usr/local/opt/${i}/libexec/gnuman:$MANPATH"
+    fi
+  done
+}
