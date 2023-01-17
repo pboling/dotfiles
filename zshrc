@@ -1,10 +1,15 @@
+# Will wipe out any pre-existing PATH setting, so do this first!
 . ~/.zsh/paths
 . ~/.zsh/config
 . ~/.zsh/aliases
-. ~/.zsh/completion
 
 # Setup Homebrew
 [[ -s "$HOME/.shared/brew.sh" ]] && source "$HOME/.shared/brew.sh"
+
+# Sets up asdf, Depends on Homebrew
+[[ -s "$HOME/.shared/bourne.sh" ]] && source "$HOME/.shared/bourne.sh"
+
+. ~/.zsh/completion
 
 # JAVA
 # Install Java: https://whichjdk.com/#adoptium-eclipse-temurin
@@ -13,8 +18,6 @@
 # asdf install java temurin-17.0.5+8
 # asdf global java temurin-17.0.5+8
 [[ -s "$HOME/.asdf/plugins/java/set-java-home.zsh" ]] && echo "Setting up Java, human" && source "$HOME/.asdf/plugins/java/set-java-home.zsh"
-
-[[ -s "$HOME/.shared/bourne.sh" ]] && echo "Loading .shared/bourne.sh, human" && source "$HOME/.shared/bourne.sh"
 
 # Autoload zsh vcs_info function (-U autoload w/o substition, -z use zsh style)
 autoload -Uz vcs_info
