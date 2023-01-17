@@ -130,6 +130,8 @@ alias gsl='git svn log'
 
 # asdf-ruby
 alias mri='asdf list-all ruby | grep -e "^\d"'
+# For GNU Grep:
+# alias mri='asdf list-all ruby | grep -Ei "^[0-9]"'
 
 # rails
 alias tlog='tail -f log/development.log'
