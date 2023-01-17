@@ -1,33 +1,19 @@
 # Will wipe out any pre-existing PATH setting, so do this first!
 source ~/.bash/paths
 source ~/.bash/aliases
-source ~/.bash/completions
 source ~/.bash/functions
 
 # Setup Homebrew
-[[ -s "$HOME/.shared/brew.sh" ]] && source "$HOME/.shared/brew.sh"
+[[ -s "$HOME/.shared/brew.sh" ]] && echo "Loading .shared/brew.sh, human" && source "$HOME/.shared/brew.sh"
 
-# Setup asdf version manager
-export ASDF_HOME=$(brew --prefix asdf)
-[[ -f "$ASDF_HOME/libexec/asdf.sh" ]] && source "$ASDF_HOME/libexec/asdf.sh"
+# Sets up asdf, Depends on Homebrew
+[[ -s "$HOME/.shared/bourne.sh" ]] && echo "Loading .shared/bourne.sh, human" && source "$HOME/.shared/bourne.sh"
 
-# Set Java Home before setting paths
-[[ -f "$HOME/.asdf/plugins/java/set-java-home.bash" ]] && source "$HOME/.asdf/plugins/java/set-java-home.bash"
-
-[[ -s "$HOME/.shared/bourne.sh" ]] && source "$HOME/.shared/bourne.sh"
+source ~/.bash/completions
 
 source ~/.bash/config
 
 # alias laptop='bash <(curl -s https://raw.githubusercontent.com/18F/laptop/master/laptop)'
-
-# Hub! for Github integration with Git
-#eval "$(hub alias -s)"
-
-# rbenv setup ($PATH and shell completions)
-#eval "$(rbenv init -)"
-
-# gpg setup - allow password from terminal input
-export GPG_TTY=$(tty)
 
 # Python! https://github.com/pyenv/pyenv-installer#prerequisites
 # if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
