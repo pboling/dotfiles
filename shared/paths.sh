@@ -3,14 +3,6 @@
 # Add bin paths, in order of precedence
 export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
 
-# homebrew
-export HOMEBREW_PREFIX="/usr/local/Homebrew";
-export HOMEBREW_CELLAR="/usr/local/Cellar/";
-export HOMEBREW_REPOSITORY="/usr/local/Homebrew";
-export PATH="/opt/homebrew/opt/grep/libexec/gnubin:/usr/local/Homebrew/bin:/usr/local/Homebrew/sbin${PATH+:$PATH}";
-export MANPATH="/usr/local/Homebrew/share/man${MANPATH+:$MANPATH}:";
-export INFOPATH="/usr/local/Homebrew/share/info:${INFOPATH:-}";
-
 # Node
 # Support SSL Cert from mkcert with NodeJS
 # export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"

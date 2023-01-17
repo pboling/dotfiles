@@ -3,7 +3,8 @@
 . ~/.zsh/aliases
 . ~/.zsh/completion
 
-autoload -Uz compinit && compinit
+# Setup Homebrew
+[[ -s "$HOME/.shared/brew.sh" ]] && source "$HOME/.shared/brew.sh"
 
 # JAVA
 # Install Java: https://whichjdk.com/#adoptium-eclipse-temurin

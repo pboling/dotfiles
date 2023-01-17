@@ -4,6 +4,9 @@ source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/functions
 
+# Setup Homebrew
+[[ -s "$HOME/.shared/brew.sh" ]] && source "$HOME/.shared/brew.sh"
+
 [[ -s "$HOME/.shared/bourne.sh" ]] && echo "Loading .shared/bourne.sh, human" && source "$HOME/.shared/bourne.sh"
 
 source ~/.bash/config
