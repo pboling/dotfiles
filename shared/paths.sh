@@ -26,9 +26,6 @@ fi
 # JX
 [[ -d "$HOME/.jx/bin/" ]] && export PATH=$HOME/.jx/bin/:$PATH
 
-# GNU tools
-export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
-
 # ES
 # https://chartio.com/resources/tutorials/how-to-install-elasticsearch-on-mac-os-x/#manual-elasticsearch-installation
 # export ES_HOME=~/src/elasticsearch-6.8.4
