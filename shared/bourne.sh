@@ -1,6 +1,3 @@
-# Hub! for Github integration with Git
-eval "$(hub alias -s)"
-
 # gpg setup - allow password from terminal input
 export GPG_TTY=$(tty)
 
@@ -11,8 +8,13 @@ umask 0002
 export ASDF_HOME=$(brew --prefix asdf)
 [[ -f "$ASDF_HOME/libexec/asdf.sh" ]] && source "$ASDF_HOME/libexec/asdf.sh"
 
+# Hub! for Github integration with Git
+eval "$(hub alias -s)"
+
 # rbenv setup ($PATH and shell completions)
 #eval "$(rbenv init -)"
 
 # use .localrc for settings specific to one system
 [[ -f "$HOME/.localrc" ]] && echo "Loading your .localrc, human" && source "$HOME/.localrc"
+
+export LANG=en_US.UTF-8
