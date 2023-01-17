@@ -41,6 +41,9 @@ function newline_at_eof {
         echo "No newline at end of file!"
     fi
 }
+function grm {
+    git status | grep deleted | awk '{print \$3}' | xargs git rm
+}
 function gnuon {
   local gnu_packages=(
     coreutils
