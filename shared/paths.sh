@@ -1,5 +1,3 @@
-# export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
-
 # Add bin paths, in order of precedence
 export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
 

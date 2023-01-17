@@ -1,4 +1,3 @@
-# Will wipe out any pre-existing PATH setting, so do this first!
 . ~/.zsh/paths
 . ~/.zsh/config
 . ~/.zsh/aliases

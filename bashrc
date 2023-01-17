@@ -1,4 +1,3 @@
-# Will wipe out any pre-existing PATH setting, so do this first!
 source ~/.bash/paths
 source ~/.bash/aliases
 source ~/.bash/functions
