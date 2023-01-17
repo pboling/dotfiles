@@ -193,3 +193,5 @@ alias dropalt='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/
 
 # docker
 # alias evdocker="eval $(docker-machine env default)"
+
+alias path='tr ":" "\n" <<< "$PATH"'

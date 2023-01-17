@@ -1,7 +1,10 @@
 # homebrew
-export HOMEBREW_PREFIX="/usr/local/Homebrew";
-export HOMEBREW_CELLAR="/usr/local/Cellar/";
-export HOMEBREW_REPOSITORY="/usr/local/Homebrew";
-export PATH="/usr/local/Homebrew/bin:/usr/local/Homebrew/sbin${PATH+:$PATH}";
-export MANPATH="/usr/local/Homebrew/share/man${MANPATH+:$MANPATH}:";
-export INFOPATH="/usr/local/Homebrew/share/info:${INFOPATH:-}";
+export HOMEBREW_PREFIX=$(brew --prefix)
+export HOMEBREW_CELLAR="${HOMEBREW_PREFIX}/Cellar";
+export HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew";
+export PATH="${HOMEBREW_PREFIX}/bin:${HOMEBREW_PREFIX}/sbin:${PATH+:$PATH}";
+export MANPATH="${HOMEBREW_PREFIX}/share/man:${MANPATH+:$MANPATH}:";
+export INFOPATH="${HOMEBREW_PREFIX}/share/info:${INFOPATH:-}";
+
+# git
+export PATH="${HOMEBREW_PREFIX}/opt/git/bin/:$PATH"
