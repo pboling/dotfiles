@@ -33,8 +33,6 @@ vendor/bundle
 .byebug_history
 # For Storybook (React, Javascropt)
 storybook-static/
-# For asdf
-.tool-versions
 # For Hugo
 .hugo_build.lock
 
@@ -49,3 +47,7 @@ Archive.zip
 
 # Local Project secrets and config 
 .env
+.envrc
+
+# Local Certs for Local SSL
+local_ssl_certs/
