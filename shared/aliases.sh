@@ -195,3 +195,8 @@ alias dropalt='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/
 # alias evdocker="eval $(docker-machine env default)"
 
 alias path='tr ":" "\n" <<< "$PATH"'
+
+# If a ton of files appear with names identical to real files but prepended with `._`, this will get rid of that trash.
+# The trash files have contents in a trash encoding, and look something like this:
+#   This resource fork intentionally left blank �� input: Mac OS X
+alias rezfix='(echo -en "Deleted bad rez files: "; find . -name "\._*" -type f -exec rm {} \; -exec /bin/echo {} \; | wc -l)'
