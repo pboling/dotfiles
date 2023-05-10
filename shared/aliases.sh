@@ -115,7 +115,7 @@ alias gsoft='git reset --soft HEAD'
 alias gback='git reset --soft HEAD\^'
 alias gash='git stash'
 alias gashp='git stash pop'
-alias gcl="git clean -d -f"
+alias gcln="git clean -d -f"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # git-svn
