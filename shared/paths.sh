@@ -44,3 +44,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ### KUBECONFIG PATHS
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
+
+### 1Password SSH Agent
+export SSH_AUTH_SOCK=~/.1password/agent.sock
