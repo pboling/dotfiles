@@ -53,5 +53,4 @@ Archive.zip
 .envrc
 
 # Local Certs for Local SSL
-/local_ssl_certs
-
+local_ssl_certs/
