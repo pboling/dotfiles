@@ -35,7 +35,7 @@ export PATH="${HOMEBREW_PREFIX}/opt/git/bin/:$PATH"
 # bundle config build.mysql2 --with-ldflags=-L${HOMEBREW_PREFIX}/opt/openssl@3/lib --with-cppflags=-I${HOMEBREW_PREFIX}/opt/openssl@3/include
 # Mysql: https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
 # Restart: brew services restart mysql@5.7
-#export PATH="${HOMEBREW_PREFIX}/opt/mysql@5.7/bin:$PATH"
+export PATH="${HOMEBREW_PREFIX}/opt/mysql@5.7/bin:$PATH"
 
 # PHP
 #export PATH="${HOMEBREW_PREFIX}/opt/php@7.4/bin:$PATH"
