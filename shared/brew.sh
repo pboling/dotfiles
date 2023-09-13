@@ -28,10 +28,11 @@ export PATH="${HOMEBREW_PREFIX}/opt/git/bin/:$PATH"
 # Restart: brew services restart postgresql@12
 #export PATH="${HOMEBREW_PREFIX}/Cellar/postgresql@12/12.9_1/bin:$PATH"
 
-# brew install mysql#5.7 with openssl (keg-only, not in path)
+# brew install mysql@5.7 with openssl (keg-only, not in path)
 # For compilers to find mysql@5.7 you may need to set:
 #  export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/mysql@5.7/lib"
 #  export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/mysql@5.7/include"
+# NOTE: I think the following config with openssl@3 would be for MySQL v8, not MySQL v5.7, which requires openssl@1.1
 # bundle config build.mysql2 --with-ldflags=-L${HOMEBREW_PREFIX}/opt/openssl@3/lib --with-cppflags=-I${HOMEBREW_PREFIX}/opt/openssl@3/include
 # Mysql: https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
 # Restart: brew services restart mysql@5.7
