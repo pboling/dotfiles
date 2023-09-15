@@ -46,8 +46,9 @@ tag_release.sh
 Archive.zip
 
 # Local Project secrets and config 
+# NOTE: Not ignoring .envrc because using dotenv directive
+#       for shared config in .envrc and private config in .env
 .env
-.envrc
 
 # Local Certs for Local SSL
 local_ssl_certs/
