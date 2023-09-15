@@ -66,8 +66,8 @@ function check_eof_newlines {
     fix_flag="$([ "$1" == "-f" ] && echo -true || echo -false)"
     find . \
         -type f \
-        -not \( -path "./node_modules" -prune \)
-        -not \( -path "./vendor" -prune \)
+        -not \( -path "./node_modules" -prune \) \
+        -not \( -path "./vendor" -prune \) \
         -exec sh -c 'file -b "{}" | grep -q text' \; \
         -exec sh -c '[ "$(tail -c 1 "{}" | od -An -a | tr -d "[:space:]")" != "nl" ]' \; \
         -print \
