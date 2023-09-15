@@ -47,6 +47,22 @@ function empty_newline_at_eof {
         exit 1
     fi
 }
+function check_eof_newlines {
+    # Finds files without final newlines
+    # Pass "-f" to also fix those files
+    # See: https://stackoverflow.com/a/67426395/213191
+    fix_flag="$([ "$1" == "-f" ] && echo -true || echo -false)"
+    find . \
+        -type f \
+        # See: https://stackoverflow.com/a/69830768/213191
+        -not \( -path "./node_modules" -prune \)
+        -not \( -path "./vendor" -prune \)
+        -exec sh -c 'file -b "{}" | grep -q text' \; \
+        -exec sh -c '[ "$(tail -c 1 "{}" | od -An -a | tr -d "[:space:]")" != "nl" ]' \; \
+        -print \
+        $fix_flag \
+        -exec sh -c 'echo >> "{}"' \;
+}
 function grm {
     git status | grep deleted | awk '{print \$3}' | xargs git rm
 }
