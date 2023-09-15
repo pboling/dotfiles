@@ -31,8 +31,20 @@ function newline_at_eof {
     if [[ -s "$1" && -z "$(tail -c 1 "$1")" ]]
     then
         echo "Newline at end of file!"
+        exit 0
     else
         echo "No newline at end of file!"
+        exit 1
+    fi
+}
+function empty_newline_at_eof {
+    if [[ -s "$1" && -z "$(tail -c 2 "$1")" ]]
+    then
+        echo "Empty newline at end of file!"
+        exit 0
+    else
+        echo "No empty newline at end of file!"
+        exit 1
     fi
 }
 function grm {
