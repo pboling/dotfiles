@@ -50,11 +50,22 @@ function empty_newline_at_eof {
 function check_eof_newlines {
     # Finds files without final newlines
     # Pass "-f" to also fix those files
-    # See: https://stackoverflow.com/a/67426395/213191
+    #
+    # Always have a new line marker at the end of every file comprised of text.
+    # In a POSIX system a file missing a final new line is technically not a text file.
+    # Some tools will not parse them, or parse them in unexpected ways.
+    # NOTE: We'll forgive external files, in node_modules, and vendor.
+    # See:
+    #   Official POSIX Standard: https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_206
+    #   Discussion of "why newline at EOF?": https://stackoverflow.com/q/729692/213191
+    #   Primary Source: https://stackoverflow.com/a/67426395/213191
+    #     Author: ppar, https://stackoverflow.com/users/9983387/ppar
+    #   Documentation & theory behind `-not \( -path ... \)`: https://stackoverflow.com/a/69830768/213191
+    #     Author: Gabriel Staples, https://stackoverflow.com/users/4561887/gabriel-staples
+    #   License: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/
     fix_flag="$([ "$1" == "-f" ] && echo -true || echo -false)"
     find . \
         -type f \
-        # See: https://stackoverflow.com/a/69830768/213191
         -not \( -path "./node_modules" -prune \)
         -not \( -path "./vendor" -prune \)
         -exec sh -c 'file -b "{}" | grep -q text' \; \
