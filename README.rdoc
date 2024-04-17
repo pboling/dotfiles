@@ -78,3 +78,28 @@ There are several features enabled in Ruby's irb including history and
 completion. Many convenience methods are added as well such as "ri"
 which can be used to get inline documentation in IRB. See irbrc and
 railsrc files for details.
+
+== Building against homebrew
+
+For compilers to find zlib you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/zlib/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
+
+For pkg-config to find zlib you may need to set:
+  export PKG_CONFIG_PATH="$(brew --prefix zlib)/lib/pkgconfig"
+
+For compilers to find curl you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+
+For pkg-config to find curl you may need to set:
+  export PKG_CONFIG_PATH="$(brew --prefix curl)/lib/pkgconfig"
+
+For pkg-config to find icu4c (icu-uc / icu-i18n) you may need to set:
+  export PKG_CONFIG_PATH=$(brew --prefix icu4c)/lib/pkgconfig 
+
+Putting the pkg-config bits together gives:
+  export PKG_CONFIG_PATH="/opt/homebrew/bin/pkg-config:$(brew --prefix icu4c)/lib/pkgconfig:$(brew --prefix curl)/lib/pkgconfig:$(brew --prefix zlib)/lib/pkgconfig"
+
+And this allows installation of, for example, postgres, e.g.:
+  asdf install postgres 16.1
