@@ -9,10 +9,10 @@ alias la='ls -A'
 # ping
 alias sping="ping -i 2 -s 4"
 
-# git
-# https://github.com/defunkt/hub
-alias git=hub
-# and then shorten it: "g" for "git"
+# GitHub CLI
+# https://github.com/cli/cli
+# It is no longer recommended to alias. Just use `gh` when desired.
+# We can make git a bit shorter though!
 alias g='git'
 
 # kubernetes

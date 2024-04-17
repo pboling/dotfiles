@@ -11,9 +11,6 @@ if [[ -f "$ASDF_HOME/libexec/asdf.sh" ]]; then
   [[ -s "$HOME/.shared/asdf.sh" ]] && source "$HOME/.shared/asdf.sh"
 fi
 
-# Hub! for Github integration with Git
-eval "$(hub alias -s)"
-
 # git & overcommit (enable on per project basis)
 export OVERCOMMIT_DISABLE=1
 
