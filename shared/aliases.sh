@@ -93,7 +93,7 @@ alias gadd='git add .'
 alias gap='git add --patch'
 alias god='git add -A .'
 alias gps='git push'
-alias gpl='git pull'
+alias gpl='git fetch && git pull'
 alias glo='git log --pretty=format:"%Cgreen%h %Creset %s %Cblueby %an (%ar) %Cred %d" --graph'
 alias gsh="git show \$1 --color"
 alias gdf='git diff'
