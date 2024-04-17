@@ -170,3 +170,11 @@ GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
 
 # direnv setup needs to be after prompt modifications
 eval "$(direnv hook zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/pboling/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -35,6 +35,12 @@ fi
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# CURL from homebrew
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
+# CARGO from homebrew's Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 ### Krew (plugin manager for kubectl)
 [[ -d "${KREW_ROOT:-$HOME/.krew}" ]] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
