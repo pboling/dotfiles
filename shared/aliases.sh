@@ -87,6 +87,9 @@ function grabdef {
 
 alias gb='git branch'
 alias gbr='git branch -a -v'
+# NOTE: gbd doesn't work as an alias.  Copy the command and run it raw. 
+# @see https://dev.to/wagenrace/remove-merged-branches-from-your-local-machine-5737
+# alias gbd="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d"
 alias gbDA='git branch | egrep -v "\*|\s+(main|master|development|develop|dev|staging|stage|rc|quality)" | xargs git branch -D'
 alias gad='git add'
 alias gadd='git add .'
@@ -164,6 +167,7 @@ alias brs='bundle exec rails s puma'
 alias brsdfp='DISABLE_FORWARD_PROXY=true bundle exec rails s puma'
 alias rdbdev='RACK_ENV=development brake db:reset'
 alias rdbtest='RACK_ENV=test brake db:drop db:create db:schema:load'
+alias typfb='typos --format=brief'
 
 # rspec
 alias best='bundle exec rspec spec'
@@ -198,3 +202,19 @@ alias path='tr ":" "\n" <<< "$PATH"'
 # The trash files have contents in a trash encoding, and look something like this:
 #   This resource fork intentionally left blank �� input: Mac OS X
 alias rezfix='(echo -en "Deleted bad rez files: "; find . -name "\._*" -type f -exec rm {} \; -exec /bin/echo {} \; | wc -l)'
+
+# Because Bill Gates had no idea what he was doing when he stole the code to create DOS, he ended up without file-level permissions.
+# Files copied to FAT or exFAT drives will lose all permissions, and when copied back to a well designed file system, the permissions will need to be fixed.
+# This is designed to work for a Rails app that is copied to and back from a FAT or exFAT filesystem, but may work in other scenarios.
+# USAGE:
+#   billfix
+alias exfatfixfiles='(echo -en "Fixed file permission mistakes (Thanks Bill Gates!): ";
+ find . -type d -exec chmod -v 775 {} \; | wc -l)'
+alias exfatfixdirs='(echo -en "Fixed directory permission mistakes (Thanks Bill Gates!): ";
+ find . -type f -exec chmod -v 664 {} \; | wc -l)'
+alias exfatfixbindir='(echo -en "Fixed exec bindir permission mistakes (Thanks Bill Gates!): ";
+ find . -type d \( -name "bin" -o -name "script" -o -name "exe" \) -exec chmod -v 755 {} \; | wc -l)'
+alias exfatfixbinfiles='(echo -en "Fixed script files in bindir permission mistakes (Thanks Bill Gates!): ";
+ find . -type d \( -name "bin" -o -name "script" -o -name "exe" \) -print0 | \
+  xargs -0 -I{.} find {.} -type f \( -name "*.sh" -o -name "*.rb" -o ! -name "*.*" \) -exec chmod -v 775 {} \; | wc -l)'
+alias billfix='(exfatfixfiles && exfatfixdirs && exfatfixbindir && exfatfixbinfiles)'
