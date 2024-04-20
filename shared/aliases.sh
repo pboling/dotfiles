@@ -14,6 +14,8 @@ alias sping="ping -i 2 -s 4"
 # It is no longer recommended to alias. Just use `gh` when desired.
 # We can make git a bit shorter though!
 alias g='git'
+# pnpm
+alias pn='pnpm'
 
 # kubernetes
 alias k=kubectl
