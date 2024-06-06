@@ -10,12 +10,6 @@ function co2 { cd ~/src/my/oauth2; }
 function crubo { 
     local project="${1:-rubocop-lts}"
     cd ~/src/rubocop-lts/$project; }
-function cr { 
-    local project="${1:-api}"
-    cd ~/src/rivi/$project; }
-function cud {
-    local project="${1:-api}"
-    cd ~/src/uds/$project; }
 function psqlsrv {
     local version="${1:-14.5}"
     local action="${2:-start}"
