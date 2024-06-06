@@ -87,11 +87,12 @@ function grabdef {
     fi
 }
 
+# @see https://dev.to/wagenrace/remove-merged-branches-from-your-local-machine-5737
+function gunk {
+    git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
+}
 alias gb='git branch'
 alias gbr='git branch -a -v'
-# NOTE: gbd doesn't work as an alias.  Copy the command and run it raw. 
-# @see https://dev.to/wagenrace/remove-merged-branches-from-your-local-machine-5737
-# alias gbd="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d"
 alias gbDA='git branch | egrep -v "\*|\s+(main|master|development|develop|dev|staging|stage|rc|quality)" | xargs git branch -D'
 alias gad='git add'
 alias gadd='git add .'
