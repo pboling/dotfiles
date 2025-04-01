@@ -7,9 +7,6 @@ fi
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 
-# Set my preferred editor to TextWrangler
-export EDITOR='nano'
-
 fpath=(~/.zsh/functions $fpath)
 
 autoload -U ~/.zsh/functions/*(:t)
