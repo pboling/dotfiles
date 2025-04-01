@@ -46,7 +46,7 @@ tag_release.sh
 Archive.zip
 
 # rubygem development
-*.gem
+/*.gem
 
 # Local Project secrets and config 
 .env
