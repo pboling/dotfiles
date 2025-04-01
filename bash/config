@@ -7,10 +7,8 @@ ps1_set --prompt ∴
 
 # Set editor to TextWrangler
 #
-# Set editor to nano
-export EDITOR="nano"
-# Set editor to bin/mate_wait script
-#export EDITOR="mate_wait"
+# Set editor to Ox (brew install ox)
+export EDITOR="ox"
 
 # Allow GPG to sign keys
 export GPG_TTY=$(tty)
