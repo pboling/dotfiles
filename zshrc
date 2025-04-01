@@ -170,6 +170,9 @@ fi
 
 GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
 
+# For my yearly Gem Signing Certificate
+GEM_CERT_PATH="/Users/pboling/.ssh/gem-public_cert.pem"
+
 # direnv setup needs to be after prompt modifications
 eval "$(direnv hook zsh)"
 
